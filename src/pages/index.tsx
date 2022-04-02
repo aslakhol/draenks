@@ -13,6 +13,7 @@ const Home: NextPage = () => {
   const createDrinkMutation = trpc.useMutation("create-drink");
 
   console.log(process.env.NEXT_VERCEL_URL, "foo");
+  console.log(process.env.DATABASE_URL, "bar");
 
   useEffect(() => {
     console.log(drinks);
