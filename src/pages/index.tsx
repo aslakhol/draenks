@@ -7,11 +7,6 @@ const Home: NextPage = () => {
   const { data, isLoading } = trpc.useQuery(["hello", { text: "me" }]);
 
   const { data: foob } = trpc.useQuery(["world"]);
-  const { data: foo } = trpc.useQuery(["foo"]);
-
-  useEffect(() => {
-    console.log(foo);
-  }, [foo]);
 
   const createDrinkMutation = trpc.useMutation("create-drink");
 

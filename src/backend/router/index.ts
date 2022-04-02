@@ -27,7 +27,6 @@ export const appRouter = trpc
       return prisma.drink.findMany();
     },
   })
-  .query("foo", { resolve: () => process.env.DATABASE_URL })
   .mutation("create-drink", {
     input: z.object({
       name: z.string(),
