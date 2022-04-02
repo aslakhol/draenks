@@ -7,18 +7,13 @@ const Home: NextPage = () => {
   const { data, isLoading } = trpc.useQuery(["hello", { text: "me" }]);
 
   const { data: foob } = trpc.useQuery(["world"]);
-
-  const { data: drinks } = trpc.useQuery(["drinks"]);
-
-  const createDrinkMutation = trpc.useMutation("create-drink");
-
-  console.log(process.env.NEXT_VERCEL_URL, "foo");
-  console.log(process.env.DATABASE_URL, "bar");
-  console.log(process.env.TEST, "test");
+  const { data: foo } = trpc.useQuery(["foo"]);
 
   useEffect(() => {
-    console.log(drinks);
-  }, [drinks]);
+    console.log(foo);
+  }, [foo]);
+
+  const createDrinkMutation = trpc.useMutation("create-drink");
 
   const handleClick = () => {
     createDrinkMutation.mutate({ name: input });
