@@ -14,6 +14,7 @@ const Home: NextPage = () => {
 
   console.log(process.env.NEXT_VERCEL_URL, "foo");
   console.log(process.env.DATABASE_URL, "bar");
+  console.log(process.env.TEST, "test");
 
   useEffect(() => {
     console.log(drinks);
