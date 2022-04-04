@@ -9,7 +9,7 @@ import { withTRPC } from "@trpc/next";
 import type { AppRouter } from "@/backend/router";
 
 function getBaseUrl() {
-  if (process.browser) return ""; // Browser should use current path
+  if (typeof window !== "undefined") return ""; // Browser should use current path
   if (process.env.NEXT_PUBLIC_VERCEL_URL)
     return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`; // SSR should use vercel url
 

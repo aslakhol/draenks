@@ -1,6 +1,6 @@
 import { trpc } from "@/utils/trpc";
 import type { NextPage } from "next";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Home: NextPage = () => {
   const [input, setInput] = useState("");
