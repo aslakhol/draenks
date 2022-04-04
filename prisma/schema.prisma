@@ -13,7 +13,69 @@ datasource db {
   referentialIntegrity = "prisma"
 }
 
-model Drink {
-  id   Int    @id @default(autoincrement())
-  name String
+model Drinks {
+  drinkId      Int                  @id @default(autoincrement())
+  drinkName    String
+  description  String?
+  instructions String?
+  variant      String?
+  ingredients  IngredientForDrink[]
+  bars         DrinkForBar[]
+  deleted      Boolean              @default(false)
+}
+
+model Ingredients {
+  ingredientId   Int                  @id @default(autoincrement())
+  ingredientName String
+  description    String?
+  drinks         IngredientForDrink[]
+  bars           IngredientForBar[]
+  deleted        Boolean              @default(false)
+}
+
+model IngredientForDrink {
+  drink        Drinks        @relation(fields: [drinkId], references: [drinkId])
+  drinkId      Int
+  ingredient   Ingredients   @relation(fields: [ingredientId], references: [ingredientId])
+  ingredientId Int
+  amount       Float
+  unit         MeasuringUnit
+
+  @@id([drinkId, ingredientId])
+}
+
+enum MeasuringUnit {
+  ML
+  OZ
+  PC
+  DROP
+  DASH
+  WASH
+  BARSPOON
+}
+
+model Bars {
+  barId       Int                @id @default(autoincrement())
+  barName     String
+  ingredients IngredientForBar[]
+  drinks      DrinkForBar[]
+  deleted     Boolean            @default(false)
+}
+
+model IngredientForBar {
+  bar          Bars        @relation(fields: [barId], references: [barId])
+  barId        Int
+  ingredient   Ingredients @relation(fields: [ingredientId], references: [ingredientId])
+  ingredientId Int
+
+  @@id([barId, ingredientId])
+}
+
+model DrinkForBar {
+  bar     Bars   @relation(fields: [barId], references: [barId])
+  barId   Int
+  drink   Drinks @relation(fields: [drinkId], references: [drinkId])
+  drinkId Int
+
+  @@id([barId, drinkId])
 }
