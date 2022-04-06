@@ -24,29 +24,40 @@ export const appRouter = trpc
   })
   .query("drinks", {
     resolve: () => {
-      return prisma.drink.findMany();
+      return prisma.drinks.findMany();
     },
   })
-  .mutation("create-drink", {
+  .query("ingredients", {
+    resolve: () => {
+      return prisma.ingredients.findMany();
+    },
+  })
+  .query("create-ingredient", {
     input: z.object({
-      name: z.string(),
+      ingredientName: z.string(),
+      description: z.string().optional(),
     }),
-    // resolve: async ({ input }) => {
-    //   const drinkInDb = await prisma.drink.create({ data: { ...input } });
+    resolve: async ({ input }) => {
+      const ingredientInDb = await prisma.ingredients.create({
+        data: { ...input },
+      });
 
-    //   return {
-    //     success: true,
-    //     drink: drinkInDb,
-    //   };
-    // },
-    async resolve({ input }) {
-      const drinkInDb = await prisma.drink.create({ data: { ...input } });
-
-      return {
-        success: true,
-      };
+      return { ingredient: ingredientInDb };
     },
   });
+// .mutation("create-drink", {
+//   input: z.object({
+//     name: z.string(),
+//   }),
+//   resolve: async ({ input }) => {
+//     const drinkInDb = await prisma.drink.create({ data: { ...input } });
+
+//     return {
+//       success: true,
+//       drink: drinkInDb,
+//     };
+// },
+// });
 
 // export type definition of API
 export type AppRouter = typeof appRouter;
