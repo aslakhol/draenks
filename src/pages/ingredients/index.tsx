@@ -1,34 +1,18 @@
+import Loading from "@/components/Loading";
+import Ingredients from "@/features/ingredients/components/Ingredients";
 import { trpc } from "@/utils/trpc";
-import type {
-  NextPage,
-  InferGetServerSidePropsType,
-  GetServerSidePropsContext,
-} from "next";
+import type { NextPage } from "next";
 import { useState } from "react";
 
-const IngredientsPage: NextPage<
-  InferGetServerSidePropsType<typeof getServerSideProps>
-> = (props) => {
-  const { foo } = props;
+const IngredientsPage: NextPage = () => {
   const [input, setInput] = useState("");
+  const { data, isFetching } = trpc.useQuery(["ingredients"]);
 
-  return (
-    <>
-      <input value={input} onChange={(e) => setInput(e.target.value)} />
-      <button />
-    </>
-  );
+  if (isFetching || !data) {
+    return <Loading />;
+  }
+
+  return <Ingredients ingredients={data} />;
 };
 
 export default IngredientsPage;
-
-export const getServerSideProps = async (
-  context: GetServerSidePropsContext
-) => {
-  const { data } = trpc.useQuery(["drinks"]);
-
-  const { data: foo } = trpc.useQuery(["hello", { text: "foo" }]);
-  return {
-    props: { foo },
-  };
-};

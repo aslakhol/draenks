@@ -1,5 +1,5 @@
 import * as trpc from "@trpc/server";
-import { date, z } from "zod";
+import { z } from "zod";
 
 import { prisma } from "@/backend/utils/prisma";
 
