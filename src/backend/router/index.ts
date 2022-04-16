@@ -32,7 +32,7 @@ export const appRouter = trpc
       return prisma.ingredients.findMany();
     },
   })
-  .query("create-ingredient", {
+  .mutation("create-ingredient", {
     input: z.object({
       ingredientName: z.string(),
       description: z.string().optional(),
