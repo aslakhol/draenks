@@ -1,4 +1,4 @@
-import { NewIngredientFormType } from "@/pages/ingredients/new";
+import { NewIngredientFormType } from "@/features/ingredients/types";
 import { ExclamationCircleIcon } from "@heroicons/react/solid";
 import { FieldError, UseFormRegister } from "react-hook-form";
 
