@@ -1,9 +1,8 @@
-import { NewIngredientFormType } from "@/features/ingredients/types";
 import { ExclamationCircleIcon } from "@heroicons/react/solid";
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
 type TextInputProps = {
-  name: keyof NewIngredientFormType;
+  name: string;
   placeholder: string;
   label: string;
   registerReturn: UseFormRegisterReturn;
@@ -32,7 +31,7 @@ const TextInput = (props: TextInputProps) => {
           placeholder={placeholder}
           className={!fieldError ? styles : errorStyles}
           aria-invalid={fieldError ? true : false}
-          aria-describedby={fieldError ? `${name}-error` : undefined}
+          aria-describedby={fieldError && `${name}-error`}
         />
         {fieldError && (
           <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">

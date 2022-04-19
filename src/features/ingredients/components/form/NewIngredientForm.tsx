@@ -1,5 +1,8 @@
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
-import { newIngredientFormSchema, NewIngredientFormType } from "../../types";
+import {
+  newIngredientFormSchema,
+  NewIngredientFormType,
+} from "../../formValidation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import IngredientName from "./IngredientName";
 import Description from "./Description";

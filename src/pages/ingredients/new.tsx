@@ -1,5 +1,5 @@
 import NewIngredientForm from "@/features/ingredients/components/form/NewIngredientForm";
-import { NewIngredientFormType } from "@/features/ingredients/types";
+import { NewIngredientFormType } from "@/features/ingredients/formValidation";
 import { trpc } from "@/utils/trpc";
 import type { NextPage } from "next";
 import { SubmitHandler } from "react-hook-form";
