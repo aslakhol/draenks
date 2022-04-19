@@ -2,6 +2,7 @@ import * as trpc from "@trpc/server";
 import { z } from "zod";
 
 import { prisma } from "@/backend/utils/prisma";
+import { newDrinkFormSchema } from "@/features/drinks/formValidation";
 
 export const appRouter = trpc
   .router()
@@ -44,20 +45,15 @@ export const appRouter = trpc
 
       return { ingredient: ingredientInDb };
     },
-  });
-// .mutation("create-drink", {
-//   input: z.object({
-//     name: z.string(),
-//   }),
-//   resolve: async ({ input }) => {
-//     const drinkInDb = await prisma.drink.create({ data: { ...input } });
+  })
+  .mutation("create-drink", {
+    input: newDrinkFormSchema,
+    resolve: async ({ input }) => {
+      const drinkInDb = await prisma.drinks.create({ data: { ...input } });
 
-//     return {
-//       success: true,
-//       drink: drinkInDb,
-//     };
-// },
-// });
+      return { drink: drinkInDb };
+    },
+  });
 
 // export type definition of API
 export type AppRouter = typeof appRouter;

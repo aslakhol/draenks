@@ -1,18 +1,18 @@
 import TextInput from "@/components/TextInput";
 import { useFormContext } from "react-hook-form";
-import { NewIngredientFormType } from "../../formValidation";
+import { NewDrinkFormType } from "../formValidation";
 
 const Description = () => {
   const {
     register,
     formState: { errors },
-  } = useFormContext<NewIngredientFormType>();
+  } = useFormContext<NewDrinkFormType>();
 
   return (
     <TextInput
       name="description"
       label="Description"
-      placeholder="Description of ingredient"
+      placeholder="Description of the drink"
       registerReturn={register("description")}
       fieldError={errors.description}
     />
