@@ -1,4 +1,4 @@
-import NewIngredientForm from "@/features/ingredients/components/NewIngredientForm";
+import NewIngredientForm from "@/features/ingredients/components/form/NewIngredientForm";
 import { NewIngredientFormType } from "@/features/ingredients/types";
 import { trpc } from "@/utils/trpc";
 import type { NextPage } from "next";
