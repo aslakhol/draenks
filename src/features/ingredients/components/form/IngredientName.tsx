@@ -13,7 +13,7 @@ const IngredientName = () => {
       name="ingredientName"
       label="Name"
       placeholder="Name of ingredient"
-      register={register}
+      registerReturn={register("ingredientName")}
       fieldError={errors.ingredientName}
     />
   );

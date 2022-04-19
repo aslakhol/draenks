@@ -13,7 +13,7 @@ const Description = () => {
       name="description"
       label="Description"
       placeholder="Description of ingredient"
-      register={register}
+      registerReturn={register("description")}
       fieldError={errors.ingredientName}
     />
   );

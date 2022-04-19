@@ -1,17 +1,17 @@
 import { NewIngredientFormType } from "@/features/ingredients/types";
 import { ExclamationCircleIcon } from "@heroicons/react/solid";
-import { FieldError, UseFormRegister } from "react-hook-form";
+import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
 type TextInputProps = {
   name: keyof NewIngredientFormType;
   placeholder: string;
   label: string;
-  register: UseFormRegister<NewIngredientFormType>;
+  registerReturn: UseFormRegisterReturn;
   fieldError?: FieldError;
 };
 
 const TextInput = (props: TextInputProps) => {
-  const { fieldError, register, name, placeholder, label } = props;
+  const { fieldError, registerReturn, name, placeholder, label } = props;
 
   const styles =
     "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md";
@@ -26,7 +26,7 @@ const TextInput = (props: TextInputProps) => {
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
         <input
-          {...register(name)}
+          {...registerReturn}
           type="text"
           id={name}
           placeholder={placeholder}
