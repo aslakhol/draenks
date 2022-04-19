@@ -26,9 +26,7 @@ const TextInput = (props: TextInputProps) => {
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
         <input
-          {...register(name, {
-            minLength: { value: 2, message: "Minimum length: 2" },
-          })}
+          {...register(name)}
           type="text"
           id={name}
           placeholder={placeholder}

@@ -1,6 +1,7 @@
 import TextInput from "@/components/TextInput";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { NewIngredientFormType } from "../types";
+import { newIngredientFormSchema, NewIngredientFormType } from "../types";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 type NewIngredientFormProps = {
   onSubmit: SubmitHandler<NewIngredientFormType>;
@@ -13,7 +14,9 @@ const NewIngredientForm = (props: NewIngredientFormProps) => {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm<NewIngredientFormType>();
+  } = useForm<NewIngredientFormType>({
+    resolver: zodResolver(newIngredientFormSchema),
+  });
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
