@@ -1,6 +1,6 @@
 import TextInput from "@/components/TextInput";
 import { useFormContext } from "react-hook-form";
-import { NewIngredientFormType } from "../../types";
+import { NewIngredientFormType } from "../../formValidation";
 
 const IngredientName = () => {
   const {
