@@ -19,6 +19,9 @@ const NewDrinksPage: NextPage = () => {
 
   const people = [
     { id: 1, name: "Leslie Alexander" },
+    { id: 2, name: "aaaa Alexander" },
+    { id: 3, name: "bbbb Alexander" },
+    { id: 4, name: "ccccc Alexander" },
     // More users...
   ];
 
@@ -32,10 +35,12 @@ const NewDrinksPage: NextPage = () => {
           {drink.drinkName} {drink.description}
         </div>
       ))}
-      <Combobox
+      <Combobox<typeof people[0]>
         labelText="Foo"
-        displayValueFunction={(a) => a?.name}
         items={people}
+        displayValueFunction={(a) => a?.name}
+        idFunction={(item) => item.id.toString()}
+        onItemSelected={(item) => console.log(item)}
       />
     </>
   );

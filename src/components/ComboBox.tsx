@@ -3,26 +3,40 @@ import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import { Combobox as HLCombobox } from "@headlessui/react";
 import { classNames } from "@/utils/utils";
 
-type ComboboxProps = {
+type ComboboxProps<ItemType> = {
   labelText: string;
-  displayValueFunction: (object: any) => string;
-  items: any[];
+  items: ItemType[];
+  onItemSelected: (selectedItem?: ItemType) => void;
+  displayValueFunction: (object: ItemType) => string;
+  idFunction: (object: ItemType) => string;
 };
 
-const Combobox = (props: ComboboxProps) => {
-  const { labelText, displayValueFunction, items } = props;
+const Combobox = <ItemType,>(props: ComboboxProps<ItemType>) => {
+  const { labelText, items, onItemSelected, displayValueFunction, idFunction } =
+    props;
   const [query, setQuery] = useState("");
-  const [selectedItem, setSelectedItem] = useState<any>();
+  const [selectedItem, setSelectedItem] = useState<ItemType>();
 
   const filteredItems =
     query === ""
       ? items
       : items.filter((item) => {
-          return item.name.toLowerCase().includes(query.toLowerCase());
+          return displayValueFunction(item)
+            .toLowerCase()
+            .includes(query.toLowerCase());
         });
 
+  const handleChange = (selected?: ItemType) => {
+    setSelectedItem(selected);
+    onItemSelected(selected);
+  };
+
   return (
-    <HLCombobox as="div" value={selectedItem} onChange={setSelectedItem}>
+    <HLCombobox
+      as="div"
+      value={selectedItem}
+      onChange={(selected) => handleChange(selected)}
+    >
       {labelText && (
         <HLCombobox.Label className="block text-sm font-medium text-gray-700">
           {labelText}
@@ -42,7 +56,7 @@ const Combobox = (props: ComboboxProps) => {
           <HLCombobox.Options className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
             {filteredItems.map((item) => (
               <HLCombobox.Option
-                key={item.id}
+                key={idFunction(item)}
                 value={item}
                 className={({ active }) =>
                   classNames(
