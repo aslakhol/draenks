@@ -1,3 +1,4 @@
+import Combobox from "@/components/ComboBox";
 import NewDrinkForm from "@/features/drinks/components/NewDrinkForm";
 import { NewDrinkFormType } from "@/features/drinks/formValidation";
 import { trpc } from "@/utils/trpc";
@@ -16,6 +17,11 @@ const NewDrinksPage: NextPage = () => {
     console.log(data);
   };
 
+  const people = [
+    { id: 1, name: "Leslie Alexander" },
+    // More users...
+  ];
+
   return (
     <>
       <h1>IngredientPage</h1>
@@ -26,6 +32,11 @@ const NewDrinksPage: NextPage = () => {
           {drink.drinkName} {drink.description}
         </div>
       ))}
+      <Combobox
+        labelText="Foo"
+        displayValueFunction={(a) => a?.name}
+        items={people}
+      />
     </>
   );
 };
