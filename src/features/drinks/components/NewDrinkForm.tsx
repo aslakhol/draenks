@@ -5,6 +5,9 @@ import DrinkName from "./DrinkName";
 import Description from "./Description";
 import Instructions from "./Instructions";
 import Variant from "./Variant";
+import Combobox from "@/components/ComboBox";
+import ControlledCombobox from "@/components/ControlledCombobox";
+import Ingredients from "./Ingredients";
 
 type NewDrinkFormProps = {
   onSubmit: SubmitHandler<NewDrinkFormType>;
@@ -27,6 +30,8 @@ const NewDrinkForm = (props: NewDrinkFormProps) => {
         <Description />
         <Instructions />
         <Variant />
+        <Ingredients />
+        <ControlledCombobox />
         <button type="submit" className={submitBtn}>
           Save
         </button>
