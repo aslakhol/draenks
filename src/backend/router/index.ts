@@ -49,7 +49,7 @@ export const appRouter = trpc
   .mutation("create-drink", {
     input: newDrinkFormSchema,
     resolve: async ({ input }) => {
-      const drinkInDb = await prisma.drinks.create({ data: { ...input } });
+      const drinkInDb = await prisma.drinks.create({ data: input });
 
       return { drink: drinkInDb };
     },
