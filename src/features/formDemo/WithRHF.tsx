@@ -16,7 +16,7 @@ const WithRHF = () => {
   return (
     <div>
       <h2>WithReactHookForms</h2>
-      {/* <p>Input Value: {watch("name")}</p> */}
+      <p>Input Value: {watch("name")}</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input className={visibleFormStyle} {...register("name")} />
       </form>
