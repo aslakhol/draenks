@@ -8,7 +8,7 @@ type SelectProps<ItemType> = {
   items: ItemType[];
   onItemSelected: (selectedItem: ItemType) => void;
   displayValueFunction: (object: ItemType) => string;
-  idFunction: (object: ItemType) => number;
+  idFunction: (object: ItemType) => string;
 };
 
 const Select = <ItemType,>(props: SelectProps<ItemType>) => {

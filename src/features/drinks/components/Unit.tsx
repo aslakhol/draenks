@@ -1,28 +1,13 @@
 import Select from "@/components/Select";
+import type { MeasuringUnit } from "@prisma/client";
 import { useController, useFormContext } from "react-hook-form";
 import { NewDrinkFormType } from "../formValidation";
 
 type UnitProps = { index: number };
 
-const people = [
-  { id: 1, name: "Wade Cooper" },
-  { id: 2, name: "Arlene Mccoy" },
-  { id: 3, name: "Devon Webb" },
-  { id: 4, name: "Tom Cook" },
-  { id: 5, name: "Tanya Fox" },
-  { id: 6, name: "Hellen Schmidt" },
-  { id: 7, name: "Caroline Schultz" },
-  { id: 8, name: "Mason Heaney" },
-  { id: 9, name: "Claudie Smitham" },
-  { id: 10, name: "Emil Schaefer" },
-];
-
-export type PeopleType = typeof people[0];
-
 const Unit = (props: UnitProps) => {
   const { index } = props;
   const {
-    register,
     formState: { errors },
     control,
   } = useFormContext<NewDrinkFormType>();
@@ -35,15 +20,27 @@ const Unit = (props: UnitProps) => {
     err = errors.ingredients[index]?.unit;
   }
 
+  // TODO add errors to select
+
   return (
     <Select
       labelText="Foo"
-      items={people}
-      displayValueFunction={(a) => a.name}
-      idFunction={(item) => item.id}
-      onItemSelected={(item) => field.onChange(item.name)}
+      items={UnitOptions}
+      displayValueFunction={(item) => item.toLocaleLowerCase()}
+      idFunction={(item) => item}
+      onItemSelected={(item) => field.onChange(item)}
     />
   );
 };
 
 export default Unit;
+
+const UnitOptions: MeasuringUnit[] = [
+  "ML",
+  "OZ",
+  "PC",
+  "DROP",
+  "DASH",
+  "WASH",
+  "BARSPOON",
+];
