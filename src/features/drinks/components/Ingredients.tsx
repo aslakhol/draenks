@@ -21,19 +21,27 @@ const Ingredients = (props: IngredientsProps) => {
   });
 
   return (
-    <>
-      Ingredients
-      {fields.map((_, index) => {
-        return (
-          <div key={`ingredientForDrink-${index}`}>
-            <IngredientId index={index} />
-            <Amount index={index} />
-            <Unit index={index} />
-          </div>
-        );
-      })}
-      <PlusButton onClick={() => append({ amount: 0, unit: "ML" })} />
-    </>
+    <div className="bg-white overflow-hidden shadow rounded-lg divide-y divide-gray-200">
+      <div className="px-4 py-5 sm:px-6">
+        <h3>Ingredients in drink</h3>
+      </div>
+      <div className="px-4 py-5 sm:p-6">
+        {fields.map((_, index) => {
+          return (
+            <div
+              key={`ingredientForDrink-${index} `}
+              className={"border border-gray-200 p-4 rounded m-4"}
+            >
+              <IngredientId index={index} />
+              <Amount index={index} />
+              <Unit index={index} />
+            </div>
+          );
+        })}
+
+        <PlusButton onClick={() => append({ amount: 0, unit: "ML" })} />
+      </div>
+    </div>
   );
 };
 

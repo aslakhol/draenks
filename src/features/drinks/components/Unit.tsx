@@ -27,7 +27,7 @@ const Unit = (props: UnitProps) => {
 
   return (
     <Select
-      labelText="Foo"
+      labelText="Unit"
       items={UnitOptions}
       displayValueFunction={(item) => item.toLocaleLowerCase()}
       idFunction={(item) => item}
