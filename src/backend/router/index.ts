@@ -3,6 +3,7 @@ import { z } from "zod";
 
 import { prisma } from "@/backend/utils/prisma";
 import { newDrinkFormSchema } from "@/features/drinks/formValidation";
+import { create } from "domain";
 
 export const appRouter = trpc
   .router()
@@ -51,7 +52,11 @@ export const appRouter = trpc
   .mutation("create-drink", {
     input: newDrinkFormSchema,
     resolve: async ({ input }) => {
-      const drinkInDb = await prisma.drinks.create({ data: input });
+      const { ingredients, ...drink } = input;
+
+      const drinkInDb = await prisma.drinks.create({
+        data: { ...drink, ingredients: { create: [...ingredients] } },
+      });
 
       return { drink: drinkInDb };
     },
