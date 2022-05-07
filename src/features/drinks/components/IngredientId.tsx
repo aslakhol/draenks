@@ -22,7 +22,7 @@ const IngredientId = (props: IngredientIdProps) => {
   let err = undefined;
 
   if (errors.ingredients) {
-    err = errors.ingredients[index]?.unit;
+    err = errors.ingredients[index]?.ingredientId;
   }
 
   // TODO add errors to select
@@ -34,6 +34,7 @@ const IngredientId = (props: IngredientIdProps) => {
       displayValueFunction={(item) => item?.ingredientName || ""}
       idFunction={(item) => item?.ingredientId.toString() || ""}
       onItemSelected={(item) => field.onChange(item?.ingredientId)}
+      fieldError={err}
     />
   );
 };

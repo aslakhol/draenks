@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 import { Combobox as HLCombobox } from "@headlessui/react";
 import { classNames } from "@/utils/utils";
+import { FieldError } from "react-hook-form";
 
 type ComboboxProps<ItemType> = {
   labelText: string;
@@ -9,11 +10,18 @@ type ComboboxProps<ItemType> = {
   onItemSelected: (selectedItem?: ItemType) => void;
   displayValueFunction: (object?: ItemType) => string;
   idFunction: (object?: ItemType) => string;
+  fieldError?: FieldError;
 };
 
 const Combobox = <ItemType,>(props: ComboboxProps<ItemType>) => {
-  const { labelText, items, onItemSelected, displayValueFunction, idFunction } =
-    props;
+  const {
+    labelText,
+    items,
+    onItemSelected,
+    displayValueFunction,
+    idFunction,
+    fieldError,
+  } = props;
   const [query, setQuery] = useState("");
   const [selectedItem, setSelectedItem] = useState<ItemType>();
 
@@ -31,6 +39,12 @@ const Combobox = <ItemType,>(props: ComboboxProps<ItemType>) => {
     onItemSelected(selected);
   };
 
+  const styles =
+    "w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm";
+
+  const errorStyles =
+    "w-full rounded-md border border-red-300 bg-white py-2 pl-3 pr-10 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm text-red-900 placeholder-red-300";
+
   return (
     <HLCombobox
       as="div"
@@ -44,7 +58,7 @@ const Combobox = <ItemType,>(props: ComboboxProps<ItemType>) => {
       )}
       <div className="relative mt-1">
         <HLCombobox.Input
-          className="w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+          className={!fieldError ? styles : errorStyles}
           onChange={(event) => setQuery(event.target.value)}
           displayValue={displayValueFunction}
         />
@@ -93,6 +107,11 @@ const Combobox = <ItemType,>(props: ComboboxProps<ItemType>) => {
           </HLCombobox.Options>
         )}
       </div>
+      {fieldError && (
+        <p className="mt-2 text-sm text-red-600" id={`${name}-error`}>
+          {fieldError.message}
+        </p>
+      )}
     </HLCombobox>
   );
 };

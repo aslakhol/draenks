@@ -32,6 +32,7 @@ const Unit = (props: UnitProps) => {
       displayValueFunction={(item) => item.toLocaleLowerCase()}
       idFunction={(item) => item}
       onItemSelected={(item) => field.onChange(item)}
+      fieldError={err}
     />
   );
 };

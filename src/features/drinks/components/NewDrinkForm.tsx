@@ -6,7 +6,6 @@ import Description from "./Description";
 import Instructions from "./Instructions";
 import Variant from "./Variant";
 import Ingredients from "./Ingredients";
-import { useEffect } from "react";
 
 type NewDrinkFormProps = {
   onSubmit: SubmitHandler<NewDrinkFormType>;
@@ -18,10 +17,6 @@ const NewDrinkForm = (props: NewDrinkFormProps) => {
   const methods = useForm<NewDrinkFormType>({
     resolver: zodResolver(newDrinkFormSchema),
   });
-
-  useEffect(() => {
-    console.log(methods.formState.errors, "methods.formState.errors");
-  }, [methods.formState.errors]);
 
   const submitBtn =
     "ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500";
