@@ -12,7 +12,10 @@ const Unit = (props: UnitProps) => {
     control,
   } = useFormContext<NewDrinkFormType>();
 
-  const { field } = useController({ name: `variant`, control });
+  const { field } = useController({
+    name: `ingredients.${index}.unit`,
+    control,
+  });
 
   let err = undefined;
 

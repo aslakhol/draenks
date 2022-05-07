@@ -7,8 +7,8 @@ type ComboboxProps<ItemType> = {
   labelText: string;
   items: ItemType[];
   onItemSelected: (selectedItem?: ItemType) => void;
-  displayValueFunction: (object: ItemType) => string;
-  idFunction: (object: ItemType) => string;
+  displayValueFunction: (object?: ItemType) => string;
+  idFunction: (object?: ItemType) => string;
 };
 
 const Combobox = <ItemType,>(props: ComboboxProps<ItemType>) => {

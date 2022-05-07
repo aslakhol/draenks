@@ -29,8 +29,10 @@ export const appRouter = trpc
     },
   })
   .query("ingredients", {
-    resolve: () => {
-      return prisma.ingredients.findMany();
+    resolve: async () => {
+      const ingredients = await prisma.ingredients.findMany();
+
+      return ingredients.filter((ingredients) => !ingredients.deleted);
     },
   })
   .mutation("create-ingredient", {

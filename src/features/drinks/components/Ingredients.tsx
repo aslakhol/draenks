@@ -1,7 +1,9 @@
 import PlusButton from "@/components/PlusButton";
+import { trpc } from "@/utils/trpc";
 import { useFieldArray } from "react-hook-form";
 import { NewDrinkFormType } from "../formValidation";
 import Amount from "./Amount";
+import IngredientId from "./IngredientId";
 import Unit from "./Unit";
 
 type IngredientsProps = {};
@@ -21,11 +23,12 @@ const Ingredients = (props: IngredientsProps) => {
   return (
     <>
       Ingredients
-      {fields.map((fieldArray, index) => {
+      {fields.map((_, index) => {
         return (
           <div key={`ingredientForDrink-${index}`}>
+            <IngredientId index={index} />
             <Amount index={index} />
-            <Unit index={0} />
+            <Unit index={index} />
           </div>
         );
       })}
