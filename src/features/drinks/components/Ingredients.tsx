@@ -1,6 +1,8 @@
 import PlusButton from "@/components/PlusButton";
 import { useFieldArray } from "react-hook-form";
 import { NewDrinkFormType } from "../formValidation";
+import Amount from "./Amount";
+import Unit from "./Unit";
 
 type IngredientsProps = {};
 
@@ -18,10 +20,16 @@ const Ingredients = (props: IngredientsProps) => {
 
   return (
     <>
+      Ingredients
       {fields.map((fieldArray, index) => {
-        return <>Ingredient</>;
+        return (
+          <div key={`ingredientForDrink-${index}`}>
+            <Amount index={index} />
+            <Unit index={0} />
+          </div>
+        );
       })}
-      <PlusButton onClick={() => console.log("plus")} />
+      <PlusButton onClick={() => append({ amount: 0, unit: "ML" })} />
     </>
   );
 };

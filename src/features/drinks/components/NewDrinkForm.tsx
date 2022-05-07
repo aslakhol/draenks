@@ -5,7 +5,6 @@ import DrinkName from "./DrinkName";
 import Description from "./Description";
 import Instructions from "./Instructions";
 import Variant from "./Variant";
-import Combobox from "@/components/ComboBox";
 import ControlledCombobox from "@/components/ControlledCombobox";
 import Ingredients from "./Ingredients";
 
@@ -23,8 +22,6 @@ const NewDrinkForm = (props: NewDrinkFormProps) => {
   const submitBtn =
     "ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500";
 
-  console.log("rerender");
-
   return (
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(onSubmit)}>
@@ -33,7 +30,7 @@ const NewDrinkForm = (props: NewDrinkFormProps) => {
         <Instructions />
         <Variant />
         <Ingredients />
-        <ControlledCombobox />
+        {/* <ControlledCombobox /> */}
         <button type="submit" className={submitBtn}>
           Save
         </button>

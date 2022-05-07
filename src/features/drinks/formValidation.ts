@@ -2,9 +2,11 @@ import { MeasuringUnit } from "@prisma/client";
 import * as z from "zod";
 
 export type NewDrinkFormType = z.infer<typeof newDrinkFormSchema>;
+export type NewIngredientForDrinkFormType = z.infer<
+  typeof newIngredientForDrinkFormSchema
+>;
 
 const newIngredientForDrinkFormSchema = z.object({
-  drinkId: z.number(),
   ingredientId: z.number(),
   amount: z.number().min(0, "Amount must be greater than 0"),
   unit: z.nativeEnum(MeasuringUnit),
