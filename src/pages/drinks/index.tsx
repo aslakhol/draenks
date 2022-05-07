@@ -1,20 +1,14 @@
-import type {
-  NextPage,
-  InferGetServerSidePropsType,
-  GetServerSidePropsContext,
-} from "next";
+import DrinkList from "@/features/drinks/components/DrinkList";
+import type { NextPage } from "next";
 
-const DrinksPage: NextPage<
-  InferGetServerSidePropsType<typeof getServerSideProps>
-> = (props) => {
+const DrinksPage: NextPage = (props) => {
   const {} = props;
-  return <>DrinksPage</>;
+
+  return (
+    <>
+      <DrinkList />
+    </>
+  );
 };
 
 export default DrinksPage;
-
-export const getServerSideProps = async (
-  context: GetServerSidePropsContext
-) => {
-  return { props: {} };
-};
