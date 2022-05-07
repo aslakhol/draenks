@@ -1,6 +1,6 @@
 import NumberInput from "@/components/NumberInput";
 import { useFormContext } from "react-hook-form";
-import { NewDrinkFormType } from "../formValidation";
+import { NewDrinkFormType } from "../../formValidation";
 
 type AmountProps = { index: number };
 

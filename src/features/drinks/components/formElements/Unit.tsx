@@ -1,7 +1,7 @@
 import Select from "@/components/Select";
 import type { MeasuringUnit } from "@prisma/client";
 import { useController, useFormContext } from "react-hook-form";
-import { NewDrinkFormType } from "../formValidation";
+import { NewDrinkFormType } from "../../formValidation";
 
 type UnitProps = { index: number };
 

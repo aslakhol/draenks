@@ -1,11 +1,11 @@
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { NewDrinkFormType, newDrinkFormSchema } from "../formValidation";
-import DrinkName from "./DrinkName";
-import Description from "./Description";
-import Instructions from "./Instructions";
-import Variant from "./Variant";
-import Ingredients from "./Ingredients";
+import Description from "./formElements/Description";
+import DrinkName from "./formElements/DrinkName";
+import Ingredients from "./formElements/Ingredients";
+import Instructions from "./formElements/Instructions";
+import Variant from "./formElements/Variant";
 
 type NewDrinkFormProps = {
   onSubmit: SubmitHandler<NewDrinkFormType>;

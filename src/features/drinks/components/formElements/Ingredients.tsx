@@ -1,7 +1,7 @@
 import PlusButton from "@/components/PlusButton";
 import { trpc } from "@/utils/trpc";
 import { useFieldArray } from "react-hook-form";
-import { NewDrinkFormType } from "../formValidation";
+import { NewDrinkFormType } from "../../formValidation";
 import Amount from "./Amount";
 import IngredientId from "./IngredientId";
 import Unit from "./Unit";
