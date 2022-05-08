@@ -6,7 +6,7 @@ import HeaderMainNav from "./HeaderMainNav";
 
 const Header = () => {
   return (
-    <Popover className="relative bg-white">
+    <Popover className="relative bg-white mb-4">
       <div
         className="absolute inset-0 shadow z-30 pointer-events-none"
         aria-hidden="true"

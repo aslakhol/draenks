@@ -1,6 +1,7 @@
 import { classNames } from "@/utils/utils";
 import { Popover, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 import { Fragment } from "react";
 import { moreLinks, primaryLinks } from "../headerLinks";
 
@@ -8,13 +9,12 @@ const HeaderMainNav = () => {
   return (
     <Popover.Group as="nav" className="hidden md:flex space-x-10">
       {primaryLinks.map((link, index) => (
-        <a
+        <div
           key={`${link.name}-${index}`}
-          href={link.href}
           className="text-base font-medium text-gray-500 hover:text-gray-900"
         >
-          {link.name}
-        </a>
+          <Link href={link.href}>{link.name}</Link>
+        </div>
       ))}
 
       <Popover className="relative">

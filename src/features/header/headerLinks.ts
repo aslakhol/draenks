@@ -1,15 +1,15 @@
 export const primaryLinks = [
   {
     name: "Drinks",
-    href: "#",
+    href: "/drinks",
   },
   {
     name: "Bars",
-    href: "#",
+    href: "/bars",
   },
   {
     name: "Ingredients",
-    href: "#",
+    href: "/ingredients",
   },
 ];
 
