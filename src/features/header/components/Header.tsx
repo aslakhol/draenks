@@ -1,6 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import { Popover } from "@headlessui/react";
 import HeaderLogo from "./HeaderLogo";
 import Hamburger, { HamburgerButton } from "./Hamburger";
 import AuthButtons from "./AuthButtons";
