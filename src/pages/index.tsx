@@ -15,7 +15,6 @@ const HomePage: NextPage = () => {
 
   return (
     <>
-      <Header />
       <div className="text-2xl text-red-400">
         <p>
           {data?.greeting} {foob}

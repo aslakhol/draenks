@@ -1,7 +1,7 @@
 import Combobox from "@/components/ComboBox";
 import { trpc } from "@/utils/trpc";
 import { useController, useFormContext } from "react-hook-form";
-import { NewDrinkFormType } from "../formValidation";
+import { NewDrinkFormType } from "../../formValidation";
 
 type IngredientIdProps = { index: number };
 
