@@ -1,9 +1,6 @@
 import DrinkList from "@/features/drinks/components/drinkList/DrinkList";
 import NewDrinkButton from "@/features/drinks/components/drinkList/NewDrinkButton";
-import Modal from "@/features/drinks/components/Modal";
-import ModalContent from "@/features/drinks/components/ModalContent";
 import type { NextPage } from "next";
-import { useState } from "react";
 
 const DrinksPage: NextPage = () => {
   return (
