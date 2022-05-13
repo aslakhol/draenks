@@ -1,4 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
+import SubmitButton from "./FinalForm/formFields/SubmitButton";
 
 type FormType = { name: string };
 
@@ -16,9 +17,10 @@ const WithRHF = () => {
   return (
     <div>
       <h2>WithReactHookForms</h2>
-      <p>Input Value: {watch("name")}</p>
+      {/* <p>Input Value: {watch("name")}</p> */}
       <form onSubmit={handleSubmit(onSubmit)}>
         <input className={visibleFormStyle} {...register("name")} />
+        <SubmitButton />
       </form>
     </div>
   );
