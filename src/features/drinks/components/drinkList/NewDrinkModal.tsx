@@ -27,7 +27,6 @@ const NewDrinkModal = (props: NewDrinkModalProps) => {
 
   const onSubmit: SubmitHandler<NewDrinkFormType> = (data) => {
     mutation.mutate(data);
-    console.log(data);
   };
 
   return (
@@ -35,7 +34,7 @@ const NewDrinkModal = (props: NewDrinkModalProps) => {
       open={open}
       setOpen={setOpen}
       dialogHeader={"Create new drink"}
-      primaryAction={() => methods.handleSubmit(onSubmit)()}
+      primaryAction={methods.handleSubmit(onSubmit)}
       primaryLabel={"Create"}
     >
       <NewDrinkForm methods={methods} />
