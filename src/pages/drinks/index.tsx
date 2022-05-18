@@ -1,5 +1,5 @@
 import DrinkList from "@/features/drinks/components/drinkList/DrinkList";
-import NewDrinkButton from "@/features/drinks/components/drinkList/NewDrinkButton";
+import NewDrink from "@/features/drinks/components/drinkList/NewDrink";
 import type { NextPage } from "next";
 
 const DrinksPage: NextPage = () => {
@@ -13,7 +13,7 @@ const DrinksPage: NextPage = () => {
           </p>
         </div>
         <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-          <NewDrinkButton />
+          <NewDrink />
         </div>
       </div>
       <DrinkList />
