@@ -1,6 +1,10 @@
-import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { NewDrinkFormType, newDrinkFormSchema } from "../formValidation";
+import {
+  FormProvider,
+  SubmitHandler,
+  useForm,
+  UseFormReturn,
+} from "react-hook-form";
+import { NewDrinkFormType } from "../formValidation";
 import Description from "./formElements/Description";
 import DrinkName from "./formElements/DrinkName";
 import Ingredients from "./formElements/Ingredients";
@@ -8,30 +12,20 @@ import Instructions from "./formElements/Instructions";
 import Variant from "./formElements/Variant";
 
 type NewDrinkFormProps = {
-  onSubmit: SubmitHandler<NewDrinkFormType>;
+  methods: UseFormReturn<NewDrinkFormType>;
 };
 
 const NewDrinkForm = (props: NewDrinkFormProps) => {
-  const { onSubmit } = props;
-
-  const methods = useForm<NewDrinkFormType>({
-    resolver: zodResolver(newDrinkFormSchema),
-  });
-
-  const submitBtn =
-    "ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500";
+  const { methods } = props;
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={methods.handleSubmit(onSubmit)}>
+      <form>
         <DrinkName />
         <Description />
         <Instructions />
         <Variant />
         <Ingredients />
-        <button type="submit" className={submitBtn}>
-          Save
-        </button>
       </form>
     </FormProvider>
   );
