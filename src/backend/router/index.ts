@@ -26,7 +26,7 @@ export const appRouter = trpc
   })
   .query("drinks", {
     resolve: () => {
-      return prisma.drinks.findMany();
+      return prisma.drinks.findMany({ include: { ingredients: true } });
     },
   })
   .query("ingredients", {

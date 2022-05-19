@@ -1,5 +1,7 @@
 import { MeasuringUnit } from "@prisma/client";
+import type { Drinks } from "@prisma/client";
 import * as z from "zod";
+import NewDrinkForm from "./components/NewDrinkForm";
 
 export type NewDrinkFormType = z.infer<typeof newDrinkFormSchema>;
 export type NewIngredientForDrinkFormType = z.infer<
@@ -14,8 +16,8 @@ const newIngredientForDrinkFormSchema = z.object({
 
 export const newDrinkFormSchema = z.object({
   drinkName: z.string().min(1, { message: "Name is required." }),
-  description: z.string().optional(),
-  instructions: z.string().optional(),
-  variant: z.string().optional(),
+  description: z.string().nullable(),
+  instructions: z.string().nullable(),
+  variant: z.string().nullable(),
   ingredients: z.array(newIngredientForDrinkFormSchema),
 });

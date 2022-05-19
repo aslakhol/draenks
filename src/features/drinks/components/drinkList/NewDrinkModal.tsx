@@ -9,11 +9,13 @@ import NewDrinkForm from "../NewDrinkForm";
 type NewDrinkModalProps = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
+  defaultDrink?: NewDrinkFormType;
 };
 
 const NewDrinkModal = (props: NewDrinkModalProps) => {
-  const { open, setOpen } = props;
+  const { open, setOpen, defaultDrink } = props;
   const methods = useForm<NewDrinkFormType>({
+    defaultValues: defaultDrink,
     resolver: zodResolver(newDrinkFormSchema),
   });
   const { refetch: refetchDrinks } = trpc.useQuery(["drinks"]);

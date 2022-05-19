@@ -1,6 +1,9 @@
-import type { Drinks } from "@prisma/client";
+import type { Drinks, IngredientForDrink } from "@prisma/client";
+import EditDrink from "./EditDrink";
 
-type DrinkListElementProps = { drink: Drinks };
+type DrinkListElementProps = {
+  drink: Drinks & { ingredients: IngredientForDrink[] };
+};
 
 const DrinkListElement = (props: DrinkListElementProps) => {
   const { drink } = props;
@@ -14,9 +17,7 @@ const DrinkListElement = (props: DrinkListElementProps) => {
         {drink.variant}
       </td>
       <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-        <a href="#" className="text-indigo-600 hover:text-indigo-900">
-          Edit<span className="sr-only">, {drink.drinkName}</span>
-        </a>
+        <EditDrink drink={drink} />
       </td>
     </>
   );

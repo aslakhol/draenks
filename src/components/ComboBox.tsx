@@ -11,6 +11,7 @@ type ComboboxProps<ItemType> = {
   displayValueFunction: (object?: ItemType) => string;
   idFunction: (object?: ItemType) => string;
   fieldError?: FieldError;
+  defaultValue?: ItemType;
 };
 
 const Combobox = <ItemType,>(props: ComboboxProps<ItemType>) => {
@@ -21,9 +22,12 @@ const Combobox = <ItemType,>(props: ComboboxProps<ItemType>) => {
     displayValueFunction,
     idFunction,
     fieldError,
+    defaultValue,
   } = props;
   const [query, setQuery] = useState("");
-  const [selectedItem, setSelectedItem] = useState<ItemType>();
+  const [selectedItem, setSelectedItem] = useState<ItemType | undefined>(
+    defaultValue
+  );
 
   const filteredItems =
     query === ""
