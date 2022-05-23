@@ -6,7 +6,8 @@ export type NewIngredientForDrinkFormType = z.infer<
   typeof newIngredientForDrinkFormSchema
 >;
 
-const newIngredientForDrinkFormSchema = z.object({
+export const newIngredientForDrinkFormSchema = z.object({
+  ingredientForDrinkId: z.number().nullable(),
   ingredientId: z.number(),
   amount: z.number().min(0, "Amount must be greater than 0"),
   unit: z.nativeEnum(MeasuringUnit),

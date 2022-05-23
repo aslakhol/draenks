@@ -1,9 +1,4 @@
-import {
-  FormProvider,
-  SubmitHandler,
-  useForm,
-  UseFormReturn,
-} from "react-hook-form";
+import { FormProvider, UseFormReturn } from "react-hook-form";
 import { NewDrinkFormType } from "../formValidation";
 import Description from "./formElements/Description";
 import DrinkName from "./formElements/DrinkName";
@@ -11,11 +6,11 @@ import Ingredients from "./formElements/Ingredients";
 import Instructions from "./formElements/Instructions";
 import Variant from "./formElements/Variant";
 
-type NewDrinkFormProps = {
+type DrinkFormProps = {
   methods: UseFormReturn<NewDrinkFormType>;
 };
 
-const NewDrinkForm = (props: NewDrinkFormProps) => {
+const DrinkForm = (props: DrinkFormProps) => {
   const { methods } = props;
 
   return (
@@ -31,4 +26,4 @@ const NewDrinkForm = (props: NewDrinkFormProps) => {
   );
 };
 
-export default NewDrinkForm;
+export default DrinkForm;

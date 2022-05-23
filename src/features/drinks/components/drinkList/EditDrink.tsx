@@ -1,6 +1,6 @@
 import type { Drinks, IngredientForDrink } from "@prisma/client";
 import { useState } from "react";
-import NewDrinkModal from "./NewDrinkModal";
+import EditDrinkModal from "./EditDrinkModal";
 
 type EditDrinkProps = { drink: Drinks & { ingredients: IngredientForDrink[] } };
 
@@ -17,7 +17,7 @@ const EditDrink = (props: EditDrinkProps) => {
         Edit<span className="sr-only">, {drink.drinkName}</span>
       </button>
       {modalOpen && (
-        <NewDrinkModal
+        <EditDrinkModal
           open={modalOpen}
           setOpen={setModalOpen}
           defaultDrink={drink}

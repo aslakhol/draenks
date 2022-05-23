@@ -3,8 +3,5 @@ export const filterNullish = (array: any[]) => {
 };
 
 export const classNames = (...classes: (string | boolean)[]) => {
-  const filtered = filterNullish(classes).join(" ");
-
-  // console.log(filtered, "f");
   return filterNullish(classes).join(" ");
 };

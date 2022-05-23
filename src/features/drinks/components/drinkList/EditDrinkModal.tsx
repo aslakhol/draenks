@@ -5,20 +5,23 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { newDrinkFormSchema, NewDrinkFormType } from "../../formValidation";
 import Modal from "../Modal";
 import DrinkForm from "../DrinkForm";
+import type { Drinks, IngredientForDrink } from "@prisma/client";
 
-type NewDrinkModalProps = {
+type EditDrinkModalProps = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
+  defaultDrink: Drinks & { ingredients: IngredientForDrink[] };
 };
 
-const NewDrinkModal = (props: NewDrinkModalProps) => {
-  const { open, setOpen } = props;
+const EditDrinkModal = (props: EditDrinkModalProps) => {
+  const { open, setOpen, defaultDrink } = props;
   const methods = useForm<NewDrinkFormType>({
+    defaultValues: defaultDrink,
     resolver: zodResolver(newDrinkFormSchema),
   });
   const { refetch: refetchDrinks } = trpc.useQuery(["drinks"]);
 
-  const mutation = trpc.useMutation(["create-drink"], {
+  const mutation = trpc.useMutation(["edit-drink"], {
     onSuccess: () => {
       refetchDrinks();
       setOpen(false);
@@ -26,20 +29,20 @@ const NewDrinkModal = (props: NewDrinkModalProps) => {
   });
 
   const onSubmit: SubmitHandler<NewDrinkFormType> = (data) => {
-    mutation.mutate(data);
+    mutation.mutate({ drinkId: defaultDrink.drinkId, drink: data });
   };
 
   return (
     <Modal
       open={open}
       setOpen={setOpen}
-      dialogHeader={"Create new drink"}
+      dialogHeader={"Edit drink"}
       primaryAction={methods.handleSubmit(onSubmit)}
-      primaryLabel={"Create"}
+      primaryLabel={"Save"}
     >
       <DrinkForm methods={methods} />
     </Modal>
   );
 };
 
-export default NewDrinkModal;
+export default EditDrinkModal;

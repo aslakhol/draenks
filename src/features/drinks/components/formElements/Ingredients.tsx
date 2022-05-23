@@ -39,7 +39,11 @@ const Ingredients = (props: IngredientsProps) => {
           );
         })}
 
-        <PlusButton onClick={() => append({ amount: 0, unit: "ML" })} />
+        <PlusButton
+          onClick={() =>
+            append({ ingredientForDrinkId: null, amount: 0, unit: "ML" })
+          }
+        />
       </div>
     </div>
   );

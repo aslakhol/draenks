@@ -1,8 +1,8 @@
 import * as trpc from "@trpc/server";
 import { z } from "zod";
-
 import { prisma } from "@/backend/utils/prisma";
 import { newDrinkFormSchema } from "@/features/drinks/formValidation";
+import { upsertIngredientsForDrink } from "../utils/ingredientForDrink";
 
 export const appRouter = trpc
   .router()
@@ -36,8 +36,34 @@ export const appRouter = trpc
     resolve: async ({ input }) => {
       const { ingredients, ...drink } = input;
 
+      const ingredientsWithOutId = ingredients.map((i) => {
+        const { ingredientForDrinkId, ...withoutId } = i;
+        return withoutId;
+      });
+
       const drinkInDb = await prisma.drinks.create({
-        data: { ...drink, ingredients: { create: [...ingredients] } },
+        data: { ...drink, ingredients: { create: [...ingredientsWithOutId] } },
+      });
+
+      return { drink: drinkInDb };
+    },
+  })
+  .mutation("edit-drink", {
+    input: z.object({
+      drinkId: z.number(),
+      drink: newDrinkFormSchema,
+    }),
+    resolve: async ({ input }) => {
+      const { drinkId, drink } = input;
+      const { ingredients, ...drinkWithoutIngredients } = drink;
+
+      await upsertIngredientsForDrink(drinkId, ingredients);
+
+      const drinkInDb = await prisma.drinks.update({
+        where: { drinkId: drinkId },
+        data: {
+          ...drinkWithoutIngredients,
+        },
       });
 
       return { drink: drinkInDb };

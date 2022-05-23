@@ -34,14 +34,13 @@ model Ingredients {
 }
 
 model IngredientForDrink {
-  drink        Drinks        @relation(fields: [drinkId], references: [drinkId])
-  drinkId      Int
-  ingredient   Ingredients   @relation(fields: [ingredientId], references: [ingredientId])
-  ingredientId Int
-  amount       Float
-  unit         MeasuringUnit
-
-  @@id([drinkId, ingredientId])
+  ingredientForDrinkId Int           @id @default(autoincrement())
+  drink                Drinks        @relation(fields: [drinkId], references: [drinkId])
+  drinkId              Int
+  ingredient           Ingredients   @relation(fields: [ingredientId], references: [ingredientId])
+  ingredientId         Int
+  amount               Float
+  unit                 MeasuringUnit
 }
 
 enum MeasuringUnit {
