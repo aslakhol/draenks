@@ -68,6 +68,14 @@ export const appRouter = trpc
 
       return { drink: drinkInDb };
     },
+  })
+  .mutation("delete-drink", {
+    input: z.object({ drinkId: z.number() }),
+    resolve: async ({ input }) => {
+      const { drinkId } = input;
+
+      await prisma.drinks.delete({ where: { drinkId: drinkId } });
+    },
   });
 
 // export type definition of API

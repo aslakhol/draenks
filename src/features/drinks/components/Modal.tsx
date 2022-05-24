@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Dispatch, Fragment, SetStateAction, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import ModalBody from "./ModalBody";
@@ -9,12 +8,20 @@ type ModalProps = {
   dialogHeader: string;
   primaryAction: () => void;
   primaryLabel: string;
+  deleteAction?: () => void;
   children: React.ReactNode;
 };
 
 const Modal = (props: ModalProps) => {
-  const { open, setOpen, dialogHeader, primaryAction, primaryLabel, children } =
-    props;
+  const {
+    open,
+    setOpen,
+    dialogHeader,
+    primaryAction,
+    primaryLabel,
+    deleteAction,
+    children,
+  } = props;
 
   const cancelButtonRef = useRef(null);
 
@@ -53,6 +60,7 @@ const Modal = (props: ModalProps) => {
               dialogHeader={dialogHeader}
               primaryAction={primaryAction}
               primaryLabel={primaryLabel}
+              deleteAction={deleteAction}
             >
               {children}
             </ModalBody>

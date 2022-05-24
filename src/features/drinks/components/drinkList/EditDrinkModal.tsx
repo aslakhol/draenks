@@ -28,9 +28,16 @@ const EditDrinkModal = (props: EditDrinkModalProps) => {
     },
   });
 
-  const onSubmit: SubmitHandler<NewDrinkFormType> = (data) => {
-    mutation.mutate({ drinkId: defaultDrink.drinkId, drink: data });
+  const onSubmit: SubmitHandler<NewDrinkFormType> = (formData) => {
+    mutation.mutate({ drinkId: defaultDrink.drinkId, drink: formData });
   };
+
+  const deleteDrink = trpc.useMutation(["delete-drink"], {
+    onSuccess: () => {
+      refetchDrinks();
+      setOpen(false);
+    },
+  });
 
   return (
     <Modal
@@ -39,6 +46,7 @@ const EditDrinkModal = (props: EditDrinkModalProps) => {
       dialogHeader={"Edit drink"}
       primaryAction={methods.handleSubmit(onSubmit)}
       primaryLabel={"Save"}
+      deleteAction={() => deleteDrink.mutate({ drinkId: defaultDrink.drinkId })}
     >
       <DrinkForm methods={methods} />
     </Modal>
