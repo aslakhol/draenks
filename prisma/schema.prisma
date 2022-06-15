@@ -35,9 +35,9 @@ model Ingredients {
 
 model IngredientForDrink {
   ingredientForDrinkId Int           @id @default(autoincrement())
-  drink                Drinks        @relation(fields: [drinkId], references: [drinkId])
+  drink                Drinks        @relation(fields: [drinkId], references: [drinkId], onDelete: Cascade)
   drinkId              Int
-  ingredient           Ingredients   @relation(fields: [ingredientId], references: [ingredientId])
+  ingredient           Ingredients   @relation(fields: [ingredientId], references: [ingredientId], onDelete: Cascade)
   ingredientId         Int
   amount               Float
   unit                 MeasuringUnit
