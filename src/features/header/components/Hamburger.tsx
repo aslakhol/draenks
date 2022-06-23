@@ -1,7 +1,7 @@
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Fragment } from "react";
-import { moreLinks, primaryLinks } from "../headerLinks";
+import { primaryLinks } from "../headerLinks";
 
 const Hamburger = () => {
   return (
@@ -41,28 +41,6 @@ const Hamburger = () => {
                   {link.name}
                 </a>
               ))}
-              {moreLinks.map((link, index) => (
-                <a
-                  key={`${link.name}-${index}`}
-                  href={link.href}
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-            <div className="mt-6">
-              <a
-                href="#"
-                className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-              >
-                Sign up
-              </a>
-              <p className="mt-6 text-center text-base font-medium text-gray-500">
-                <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                  Sign in
-                </a>
-              </p>
             </div>
           </div>
         </div>
@@ -83,13 +61,5 @@ export const HamburgerButton = () => {
 };
 
 const HamburgerLogo = () => {
-  return (
-    <div>
-      <img
-        className="h-8 w-auto"
-        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-        alt="Workflow"
-      />
-    </div>
-  );
+  return <div></div>;
 };
