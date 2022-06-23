@@ -3,6 +3,7 @@ import { z } from "zod";
 import { prisma } from "@/backend/utils/prisma";
 import { newDrinkFormSchema } from "@/features/drinks/formValidation";
 import { upsertIngredientsForDrink } from "../utils/ingredientForDrink";
+import { newIngredientFormSchema } from "@/features/ingredients/formValidation";
 
 export const appRouter = trpc
   .router()
@@ -19,16 +20,41 @@ export const appRouter = trpc
     },
   })
   .mutation("create-ingredient", {
-    input: z.object({
-      ingredientName: z.string(),
-      description: z.string().optional(),
-    }),
+    input: newIngredientFormSchema,
     resolve: async ({ input }) => {
       const ingredientInDb = await prisma.ingredients.create({
         data: { ...input },
       });
 
       return { ingredient: ingredientInDb };
+    },
+  })
+  .mutation("edit-ingredient", {
+    input: z.object({
+      ingredientId: z.number(),
+      ingredient: newIngredientFormSchema,
+    }),
+    resolve: async ({ input }) => {
+      const { ingredientId, ingredient } = input;
+
+      const drinkInDb = await prisma.ingredients.update({
+        where: { ingredientId: ingredientId },
+        data: {
+          ...ingredient,
+        },
+      });
+
+      return { drink: drinkInDb };
+    },
+  })
+  .mutation("delete-ingredient", {
+    input: z.object({ ingredientId: z.number() }),
+    resolve: async ({ input }) => {
+      const { ingredientId } = input;
+
+      await prisma.ingredients.delete({
+        where: { ingredientId: ingredientId },
+      });
     },
   })
   .mutation("create-drink", {
