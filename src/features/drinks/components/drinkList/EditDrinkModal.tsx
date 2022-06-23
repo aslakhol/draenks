@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Dispatch, SetStateAction } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { newDrinkFormSchema, NewDrinkFormType } from "../../formValidation";
-import Modal from "../Modal";
+import Modal from "../../../../components/Modal/Modal";
 import DrinkForm from "../DrinkForm";
 import type { Drinks, IngredientForDrink } from "@prisma/client";
 
