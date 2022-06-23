@@ -1,10 +1,10 @@
 import { FormProvider, UseFormReturn } from "react-hook-form";
-import { NewDrinkFormType } from "../formValidation";
-import Description from "./formElements/Description";
-import DrinkName from "./formElements/DrinkName";
-import Ingredients from "./formElements/Ingredients";
-import Instructions from "./formElements/Instructions";
-import Variant from "./formElements/Variant";
+import { NewDrinkFormType } from "../../formValidation";
+import Description from "./Description";
+import DrinkName from "./DrinkName";
+import Ingredients from "./Ingredients";
+import Instructions from "./Instructions";
+import Variant from "./Variant";
 
 type DrinkFormProps = {
   methods: UseFormReturn<NewDrinkFormType>;

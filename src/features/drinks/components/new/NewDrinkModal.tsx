@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { newDrinkFormSchema, NewDrinkFormType } from "../../formValidation";
 import Modal from "../../../../components/Modal/Modal";
-import DrinkForm from "../DrinkForm";
+import DrinkForm from "../form/DrinkForm";
 
 type NewDrinkModalProps = {
   open: boolean;

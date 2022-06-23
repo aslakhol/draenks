@@ -1,5 +1,5 @@
 import type { Drinks, IngredientForDrink } from "@prisma/client";
-import EditDrink from "./EditDrink";
+import EditDrink from "../edit/EditDrink";
 
 type DrinkListElementProps = {
   drink: Drinks & { ingredients: IngredientForDrink[] };
