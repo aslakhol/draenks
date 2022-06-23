@@ -9,7 +9,6 @@ generator client {
 datasource db {
   provider             = "mysql"
   url                  = env("DATABASE_URL")
-  shadowDatabaseUrl    = env("SHADOW_URL")
   referentialIntegrity = "prisma"
 }
 
@@ -20,7 +19,6 @@ model Drinks {
   instructions String?
   variant      String?
   ingredients  IngredientForDrink[]
-  bars         DrinkForBar[]
   deleted      Boolean              @default(false)
 }
 
@@ -29,7 +27,6 @@ model Ingredients {
   ingredientName String
   description    String?
   drinks         IngredientForDrink[]
-  bars           IngredientForBar[]
   deleted        Boolean              @default(false)
 }
 
@@ -51,30 +48,4 @@ enum MeasuringUnit {
   DASH
   WASH
   BARSPOON
-}
-
-model Bars {
-  barId       Int                @id @default(autoincrement())
-  barName     String
-  ingredients IngredientForBar[]
-  drinks      DrinkForBar[]
-  deleted     Boolean            @default(false)
-}
-
-model IngredientForBar {
-  bar          Bars        @relation(fields: [barId], references: [barId])
-  barId        Int
-  ingredient   Ingredients @relation(fields: [ingredientId], references: [ingredientId])
-  ingredientId Int
-
-  @@id([barId, ingredientId])
-}
-
-model DrinkForBar {
-  bar     Bars   @relation(fields: [barId], references: [barId])
-  barId   Int
-  drink   Drinks @relation(fields: [drinkId], references: [drinkId])
-  drinkId Int
-
-  @@id([barId, drinkId])
 }
