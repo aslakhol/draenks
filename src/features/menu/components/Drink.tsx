@@ -13,7 +13,7 @@ const Drink = (props: DrinkProps) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   if (!drink) {
-    return <Loading />;
+    return <></>;
   }
 
   return (
