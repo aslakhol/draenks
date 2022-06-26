@@ -13,8 +13,11 @@ const Bar = () => {
   }
 
   return (
-    <div className="px-8">
-      <h1 className="text-2xl pb-4">Cocktails on the menu</h1>
+    <div className="px-4 sm:px-6 lg:px-8">
+      <h1 className="text-xl font-semibold text-gray-900 pb-8 pt-1">
+        Cocktails on the menu
+      </h1>
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {drinks.map((drink) => (
           <a
