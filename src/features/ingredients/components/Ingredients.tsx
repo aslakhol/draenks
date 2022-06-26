@@ -7,9 +7,6 @@ const Ingredients = () => {
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-xl font-semibold text-gray-900">Ingredients</h1>
-          <p className="mt-2 text-sm text-gray-700">
-            A list of all ingredients currently in Drænks.
-          </p>
         </div>
         <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
           <NewIngredient />
