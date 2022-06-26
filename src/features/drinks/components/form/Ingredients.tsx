@@ -22,28 +22,33 @@ const Ingredients = (props: IngredientsProps) => {
 
   return (
     <div className="bg-white overflow-hidden shadow rounded-lg divide-y divide-gray-200">
-      <div className="px-4 py-5 sm:px-6">
-        <h3>Ingredients in drink</h3>
+      <div className="px-4 py-2 sm:px-6">
+        <h3>Ingredients</h3>
       </div>
-      <div className="px-4 py-5 sm:p-6">
+      <div className="flex flex-col px-4 sm:px-6 gap-3 pt-2 ">
         {fields.map((_, index) => {
           return (
             <div
               key={`ingredientForDrink-${index} `}
-              className={"border border-gray-200 p-4 rounded m-4"}
+              className={
+                "flex flex-col gap-2 border border-gray-200 p-4 rounded"
+              }
             >
               <IngredientId index={index} />
-              <Amount index={index} />
-              <Unit index={index} />
+              <div className="flex justify-between">
+                <Amount index={index} />
+                <Unit index={index} />
+              </div>
             </div>
           );
         })}
-
-        <PlusButton
-          onClick={() =>
-            append({ ingredientForDrinkId: null, amount: 0, unit: "ML" })
-          }
-        />
+        <div className="w-full pb-2 flex justify-center">
+          <PlusButton
+            onClick={() =>
+              append({ ingredientForDrinkId: null, amount: 0, unit: "ML" })
+            }
+          />
+        </div>
       </div>
     </div>
   );

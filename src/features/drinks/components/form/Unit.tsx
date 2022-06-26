@@ -23,8 +23,6 @@ const Unit = (props: UnitProps) => {
     err = errors.ingredients[index]?.unit;
   }
 
-  // TODO add errors to select
-
   return (
     <Select
       labelText="Unit"

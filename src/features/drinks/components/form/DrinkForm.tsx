@@ -15,7 +15,7 @@ const DrinkForm = (props: DrinkFormProps) => {
 
   return (
     <FormProvider {...methods}>
-      <form>
+      <form className="flex flex-col gap-3">
         <DrinkName />
         <Description />
         <Instructions />

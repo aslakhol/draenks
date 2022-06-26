@@ -38,7 +38,7 @@ const IngredientId = (props: IngredientIdProps) => {
 
   return (
     <Combobox
-      labelText="Ingredient"
+      labelText="Name"
       items={ingredients || []}
       displayValueFunction={(item) => item?.ingredientName || ""}
       idFunction={(item) => item?.ingredientId.toString() || ""}

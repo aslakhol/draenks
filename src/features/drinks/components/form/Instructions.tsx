@@ -1,4 +1,4 @@
-import TextInput from "@/components/TextInput";
+import TextArea from "@/components/TextArea";
 import { useFormContext } from "react-hook-form";
 import { NewDrinkFormType } from "../../formValidation";
 
@@ -9,7 +9,7 @@ const Instructions = () => {
   } = useFormContext<NewDrinkFormType>();
 
   return (
-    <TextInput
+    <TextArea
       name="instructions"
       label="Instructions"
       placeholder="How to make the cocktail"

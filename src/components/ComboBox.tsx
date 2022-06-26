@@ -53,7 +53,7 @@ const Combobox = <ItemType,>(props: ComboboxProps<ItemType>) => {
     <HLCombobox
       as="div"
       value={selectedItem}
-      onChange={(selected) => handleChange(selected)}
+      onChange={(selected: ItemType | undefined) => handleChange(selected)}
     >
       {labelText && (
         <HLCombobox.Label className="block text-sm font-medium text-gray-700">
