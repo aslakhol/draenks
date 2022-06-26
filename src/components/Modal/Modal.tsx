@@ -6,8 +6,8 @@ type ModalProps = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
   dialogHeader: string;
-  primaryAction: () => void;
-  primaryLabel: string;
+  primaryAction?: () => void;
+  primaryLabel?: string;
   deleteAction?: () => void;
   children: React.ReactNode;
 };

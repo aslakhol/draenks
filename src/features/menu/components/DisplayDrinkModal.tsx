@@ -19,13 +19,7 @@ const DisplayDrinkModal = (props: DisplayDrinkModalProps) => {
   }
 
   return (
-    <Modal
-      open={open}
-      setOpen={setOpen}
-      dialogHeader={drink.drinkName}
-      primaryAction={() => setOpen(false)}
-      primaryLabel={"Done"}
-    >
+    <Modal open={open} setOpen={setOpen} dialogHeader={drink.drinkName}>
       <div className="flex flex-col gap-2">
         <p className="italic text-xs">{drink.description}</p>
         <table className="min-w-full divide-y divide-gray-300">
