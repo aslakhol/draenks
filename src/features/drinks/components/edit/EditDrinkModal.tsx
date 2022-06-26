@@ -6,6 +6,7 @@ import { newDrinkFormSchema, NewDrinkFormType } from "../../formValidation";
 import Modal from "../../../../components/Modal/Modal";
 import DrinkForm from "../form/DrinkForm";
 import type { Drinks, IngredientForDrink } from "@prisma/client";
+import { useQueryClient } from "react-query";
 
 type EditDrinkModalProps = {
   open: boolean;
@@ -19,14 +20,16 @@ const EditDrinkModal = (props: EditDrinkModalProps) => {
     defaultValues: defaultDrink,
     resolver: zodResolver(newDrinkFormSchema),
   });
-  const { refetch: refetchDrinks } = trpc.useQuery(["drinks"]);
+  const queryClient = useQueryClient();
 
   const mutation = trpc.useMutation(["edit-drink"], {
     onSuccess: () => {
-      refetchDrinks();
+      queryClient.refetchQueries(["drinks"]);
       setOpen(false);
     },
   });
+
+  console.log(defaultDrink);
 
   const onSubmit: SubmitHandler<NewDrinkFormType> = (formData) => {
     mutation.mutate({ drinkId: defaultDrink.drinkId, drink: formData });
@@ -34,10 +37,12 @@ const EditDrinkModal = (props: EditDrinkModalProps) => {
 
   const deleteDrink = trpc.useMutation(["delete-drink"], {
     onSuccess: () => {
-      refetchDrinks();
+      queryClient.refetchQueries(["drinks"]);
       setOpen(false);
     },
   });
+
+  console.log(defaultDrink.drinkId);
 
   return (
     <Modal

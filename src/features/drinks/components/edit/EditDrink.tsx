@@ -10,8 +10,6 @@ const EditDrink = (props: EditDrinkProps) => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const { data: drink } = trpc.useQuery(["drinkForEdit", { drinkId: drinkId }]);
 
-  console.log(drink);
-
   if (!drink) {
     return <Loading />;
   }
