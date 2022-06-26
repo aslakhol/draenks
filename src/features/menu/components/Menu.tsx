@@ -1,9 +1,8 @@
 import Loading from "@/components/Loading";
 import { trpc } from "@/utils/trpc";
 
-const Bar = () => {
+const Menu = () => {
   const { data: drinks, isSuccess } = trpc.useQuery(["drinks"]);
-
   const { data: ingredients, isSuccess: ingredientsIsSuccess } = trpc.useQuery([
     "ingredients",
   ]);
@@ -17,7 +16,6 @@ const Bar = () => {
       <h1 className="text-xl font-semibold text-gray-900 pb-8 pt-1">
         Cocktails on the menu
       </h1>
-
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {drinks.map((drink) => (
           <a
@@ -27,7 +25,7 @@ const Bar = () => {
           >
             <div className="flex flex-col gap-2">
               <div className="flex justify-between">
-                <span className="text-sm font-medium text-gray-900">
+                <span className="text-sm font-semibold text-gray-900">
                   {drink.drinkName}
                 </span>
                 <span className="text-sm text-gray-500 truncate">
@@ -55,4 +53,4 @@ const Bar = () => {
   );
 };
 
-export default Bar;
+export default Menu;

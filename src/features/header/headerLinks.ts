@@ -1,6 +1,6 @@
 export const primaryLinks = [
   {
-    name: "Bar",
+    name: "Menu",
     href: "/",
   },
   {

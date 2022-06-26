@@ -1,8 +1,8 @@
-import Bar from "@/features/bar/components/Bar";
+import Menu from "@/features/menu/components/Menu";
 import { NextPage } from "next";
 
-const BarPage: NextPage = () => {
-  return <Bar />;
+const MenuPage: NextPage = () => {
+  return <Menu />;
 };
 
-export default BarPage;
+export default MenuPage;
