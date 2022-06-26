@@ -15,8 +15,8 @@ datasource db {
 model Drinks {
   drinkId      Int                  @id @default(autoincrement())
   drinkName    String
-  description  String?
-  instructions String?
+  description  String?              @db.Text
+  instructions String?              @db.Text
   variant      String?
   ingredients  IngredientForDrink[]
   deleted      Boolean              @default(false)
@@ -25,7 +25,7 @@ model Drinks {
 model Ingredients {
   ingredientId   Int                  @id @default(autoincrement())
   ingredientName String
-  description    String?
+  description    String?              @db.Text
   drinks         IngredientForDrink[]
   deleted        Boolean              @default(false)
 }
@@ -48,4 +48,5 @@ enum MeasuringUnit {
   DASH
   WASH
   BARSPOON
+  PART
 }

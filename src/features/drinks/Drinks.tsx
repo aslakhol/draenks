@@ -1,7 +1,7 @@
 import DrinkList from "./components/drinkList/DrinkList";
 import NewDrink from "./components/new/NewDrink";
 
-const Ingredients = () => {
+const Drinks = () => {
   return (
     <>
       <div className="px-4 sm:px-6 lg:px-8">
@@ -22,4 +22,4 @@ const Ingredients = () => {
   );
 };
 
-export default Ingredients;
+export default Drinks;

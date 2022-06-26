@@ -1,8 +1,8 @@
-import Ingredients from "@/features/ingredients/components/Ingredients";
+import Drinks from "@/features/drinks/Drinks";
 import type { NextPage } from "next";
 
 const DrinksPage: NextPage = () => {
-  return <Ingredients />;
+  return <Drinks />;
 };
 
 export default DrinksPage;
