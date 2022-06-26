@@ -1,12 +1,18 @@
-import type { Drinks, IngredientForDrink } from "@prisma/client";
+import Loading from "@/components/Loading";
+import { trpc } from "@/utils/trpc";
 import { useState } from "react";
 import EditDrinkModal from "./EditDrinkModal";
 
-type EditDrinkProps = { drink: Drinks & { ingredients: IngredientForDrink[] } };
+type EditDrinkProps = { drinkId: number };
 
 const EditDrink = (props: EditDrinkProps) => {
-  const { drink } = props;
+  const { drinkId } = props;
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const { data: drink } = trpc.useQuery(["drinkForEdit", { drinkId: drinkId }]);
+
+  if (!drink) {
+    return <Loading />;
+  }
 
   return (
     <>

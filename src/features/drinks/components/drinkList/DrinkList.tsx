@@ -1,14 +1,7 @@
-import { trpc } from "@/utils/trpc";
-import DrinkListElement from "./DrinkListElement";
 import DrinkListHeading from "./DrinkListHeading";
+import Drinks from "./Drinks";
 
 const DrinkList = () => {
-  const { data: drinks } = trpc.useQuery(["drinks"]);
-
-  if (!drinks) {
-    return <>Loading...</>;
-  }
-
   return (
     <TailwindTableWrapper>
       <table className="min-w-full divide-y divide-gray-300">
@@ -32,11 +25,7 @@ const DrinkList = () => {
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200 bg-white">
-          {drinks.map((drink) => (
-            <tr key={drink.drinkId}>
-              <DrinkListElement drink={drink} />
-            </tr>
-          ))}
+          <Drinks />
         </tbody>
       </table>
     </TailwindTableWrapper>

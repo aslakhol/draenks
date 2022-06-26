@@ -29,6 +29,19 @@ export const appRouter = trpc
       return drink;
     },
   })
+  .query("drinkForEdit", {
+    input: z.object({ drinkId: z.number() }),
+    resolve: async ({ input }) => {
+      const drink = await prisma.drinks.findFirst({
+        where: { drinkId: input.drinkId },
+        include: {
+          ingredients: true,
+        },
+      });
+
+      return drink;
+    },
+  })
   .query("drinks", {
     resolve: () => {
       return prisma.drinks.findMany({
