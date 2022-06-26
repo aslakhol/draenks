@@ -6,7 +6,7 @@ type ModalBodyProps = {
   cancelButtonRef: MutableRefObject<null>;
   dialogHeader: string;
   primaryAction: () => void;
-  primaryLabel: string;
+  primaryLabel?: string;
   deleteAction?: () => void;
   children: React.ReactNode;
 };

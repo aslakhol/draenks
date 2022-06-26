@@ -7,9 +7,42 @@ import { newIngredientFormSchema } from "@/features/ingredients/formValidation";
 
 export const appRouter = trpc
   .router()
+  .query("drink", {
+    input: z.object({ drinkId: z.number() }),
+    resolve: async ({ input }) => {
+      const drink = await prisma.drinks.findFirst({
+        where: { drinkId: input.drinkId },
+        include: {
+          ingredients: {
+            select: {
+              ingredientForDrinkId: true,
+              amount: true,
+              unit: true,
+              ingredient: {
+                select: { ingredientName: true, ingredientId: true },
+              },
+            },
+          },
+        },
+      });
+
+      return drink;
+    },
+  })
   .query("drinks", {
     resolve: () => {
-      return prisma.drinks.findMany({ include: { ingredients: true } });
+      return prisma.drinks.findMany({
+        include: {
+          ingredients: {
+            select: {
+              ingredientForDrinkId: true,
+              ingredient: {
+                select: { ingredientName: true, ingredientId: true },
+              },
+            },
+          },
+        },
+      });
     },
   })
   .query("ingredients", {
