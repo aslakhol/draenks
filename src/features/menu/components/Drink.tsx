@@ -20,7 +20,7 @@ const Drink = (props: DrinkProps) => {
     <div
       key={drink.drinkId}
       onClick={() => setModalOpen(true)}
-      className="focus:outline-none relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex flex-col justify-between hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+      className="focus:outline-none relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex flex-col justify-between hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 cursor-pointer"
     >
       <div className="flex flex-col gap-2">
         <div className="flex justify-between">
