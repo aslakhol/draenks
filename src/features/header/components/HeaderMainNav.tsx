@@ -1,6 +1,3 @@
-import { classNames } from "@/utils/utils";
-import { Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { primaryLinks } from "../headerLinks";
 
