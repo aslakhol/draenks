@@ -15,7 +15,6 @@ const Drink = (props: Props) => {
   }
 
   const drinkLink = `drinks/${drink.drinkId}`;
-  console.log(drinkLink);
 
   return (
     <tr>

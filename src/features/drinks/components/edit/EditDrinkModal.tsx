@@ -29,8 +29,6 @@ const EditDrinkModal = (props: EditDrinkModalProps) => {
     },
   });
 
-  console.log(defaultDrink);
-
   const onSubmit: SubmitHandler<NewDrinkFormType> = (formData) => {
     mutation.mutate({ drinkId: defaultDrink.drinkId, drink: formData });
   };
@@ -41,8 +39,6 @@ const EditDrinkModal = (props: EditDrinkModalProps) => {
       setOpen(false);
     },
   });
-
-  console.log(defaultDrink.drinkId);
 
   return (
     <Modal
