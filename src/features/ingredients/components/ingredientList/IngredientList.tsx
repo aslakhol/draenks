@@ -34,9 +34,10 @@ const IngredientList = () => {
         </thead>
         <tbody className="divide-y divide-gray-200 bg-white">
           {ingredients.map((ingredient) => (
-            <tr key={ingredient.ingredientId}>
-              <IngredientListElement ingredient={ingredient} />
-            </tr>
+            <IngredientListElement
+              ingredient={ingredient}
+              key={ingredient.ingredientId}
+            />
           ))}
         </tbody>
       </table>
