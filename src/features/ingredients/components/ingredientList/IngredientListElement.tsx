@@ -28,7 +28,7 @@ const IngredientListElement = (props: IngredientListElementProps) => {
         </td>
       </tr>
       <DisplayIngredientModal
-        ingredient={ingredient}
+        ingredientId={ingredient.ingredientId}
         open={modalOpen}
         setOpen={setModalOpen}
       />

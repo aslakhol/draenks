@@ -1,15 +1,23 @@
 import Modal from "@/components/Modal/Modal";
-import type { Ingredients } from "@prisma/client";
+import { trpc } from "@/utils/trpc";
 import { Dispatch, SetStateAction } from "react";
 
 type DisplayDrinkModalProps = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
-  ingredient: Ingredients;
+  ingredientId: number;
 };
 
 const DisplayIngredientModal = (props: DisplayDrinkModalProps) => {
-  const { open, setOpen, ingredient } = props;
+  const { open, setOpen, ingredientId } = props;
+  const { data: ingredient } = trpc.useQuery([
+    "ingredient",
+    { ingredientId: ingredientId },
+  ]);
+
+  if (!ingredient) {
+    return <></>;
+  }
 
   return (
     <Modal

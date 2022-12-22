@@ -58,6 +58,16 @@ export const appRouter = trpc
       });
     },
   })
+  .query("ingredient", {
+    input: z.object({ ingredientId: z.number() }),
+    resolve: async ({ input }) => {
+      const ingredient = await prisma.ingredients.findFirst({
+        where: { ingredientId: input.ingredientId },
+      });
+
+      return ingredient;
+    },
+  })
   .query("ingredients", {
     resolve: async () => {
       const ingredients = await prisma.ingredients.findMany();
