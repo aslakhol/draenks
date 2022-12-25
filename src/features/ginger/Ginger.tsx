@@ -1,27 +1,27 @@
 import ControlledNumberInput from "@/components/ControlledNumberInput";
 import { useState } from "react";
+import Costs from "./Costs";
 
 type GingerProps = {};
 
 const Ginger = (props: GingerProps) => {
   const {} = props;
-  const [ginger, setGinger] = useState(5000);
-  const [gingerPricePrKg, setGingerPricePrKg] = useState(90);
-  const [sugarPricePrKg, setSugarPricePrKg] = useState(25);
+  const [ginger, setGinger] = useState(1800);
 
-  const juice = Math.round(ginger * 0.66);
-
+  const juice = Math.round(ginger * 0.666667);
   const waterToAdd = juice;
-
   const liquidVolume = juice + waterToAdd;
-
   const sugarVolume = juice;
-
   const estimatedFinalVolume = Math.round(liquidVolume + sugarVolume / 2);
 
-  const gingerPrice = Math.round(ginger * (gingerPricePrKg / 1000));
+  const lime = Math.round(0.5 * estimatedFinalVolume);
+  const farris = Math.round(0.83333 * estimatedFinalVolume);
+  const vodka = Math.round(0.666667 * estimatedFinalVolume);
+  const ice = Math.round(0.3333333 * estimatedFinalVolume);
 
-  const sugarPrice = Math.round(sugarVolume * (sugarPricePrKg / 1000));
+  const totalMule = estimatedFinalVolume + lime + farris + vodka + ice;
+  const glassSize = 250;
+  const amountOfMules = totalMule / glassSize;
 
   return (
     <div className="w-1/2 mx-auto py-4">
@@ -35,43 +35,49 @@ const Ginger = (props: GingerProps) => {
 
       <ul className="flex flex-col gap-3">
         <li>
-          With {ginger}g of ginger you should get {juice}ml ginger juice.
+          With {ginger} g of ginger you should get {juice} ml ginger juice.
         </li>
         <li>
-          To this you should add {waterToAdd}ml of water for a liquid volume of{" "}
-          {liquidVolume}ml
+          To this you should add {waterToAdd} ml of water for a liquid volume of{" "}
+          {liquidVolume} ml
         </li>
-        <li>To this you should add {sugarVolume}g of sugar.</li>
+        <li>To this you should add {sugarVolume} g of sugar.</li>
         <li>
-          You should end up with an estimated volume of {estimatedFinalVolume}
+          You should end up with an estimated volume of {estimatedFinalVolume}{" "}
           ml.
         </li>
       </ul>
       <div className="py-4" />
-      <ControlledNumberInput
-        label="What is the price of ginger? (per kg)"
-        name="gingerPricePrKg"
-        value={gingerPricePrKg}
-        onChange={(e) => setGingerPricePrKg(Number(e.target.value))}
-      />
-      <ControlledNumberInput
-        label="What is the price of sugar? (per kg)"
-        name="sugarPricePrKg"
-        value={sugarPricePrKg}
-        onChange={(e) => setSugarPricePrKg(Number(e.target.value))}
-      />
-      <div className="py-4" />
+
+      <p className="pb-3">
+        {estimatedFinalVolume} ml ginger syrup will make in total{" "}
+        {estimatedFinalVolume + lime + farris + vodka + ice} ml of mule. With a{" "}
+        {glassSize} ml glass that makes {amountOfMules} cocktails. You will need
+        some other ingredients, estimated amounts are found below.
+      </p>
       <ul className="flex flex-col gap-3">
+        <li>{lime} ml of lime and/or lemon juice.</li>
         <li>
-          If ginger costs {gingerPricePrKg}kr per kg your total ginger cost will
-          be {gingerPrice}kr.
+          {farris} ml of Farris (or other sparkling water with a lot co2 and
+          some salts).
         </li>
         <li>
-          If sugar costs {sugarPricePrKg}kr per kg your total sugar cost will be{" "}
-          {sugarPrice}kr.
+          {vodka} ml vodka (or adjusted amount of stronger flavourless liqor).
         </li>
-        <li>Your total cost should be {gingerPrice + sugarPrice}kr</li>
+        <li>{ice} ml ice</li>
       </ul>
+
+      <div className="py-4" />
+
+      <Costs
+        ginger={ginger}
+        sugar={sugarVolume}
+        lime={lime}
+        farris={farris}
+        vodka={vodka}
+        ice={ice}
+        amountOfMules={amountOfMules}
+      />
     </div>
   );
 };
