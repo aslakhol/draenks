@@ -39,7 +39,7 @@ const Ginger = (props: GingerProps) => {
         </li>
         <li>
           To this you should add {waterToAdd}ml of water for a liquid volume of{" "}
-          {liquidVolume}
+          {liquidVolume}ml
         </li>
         <li>To this you should add {sugarVolume}g of sugar.</li>
         <li>
