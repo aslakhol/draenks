@@ -1,6 +1,5 @@
-import Ginger from "@/features/ginger/ginger";
+import Ginger from "@/features/ginger/Ginger";
 import { NextPage } from "next";
-import Head from "next/head";
 
 const GingerPage: NextPage = () => {
   return (
