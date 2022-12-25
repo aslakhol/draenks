@@ -28,7 +28,7 @@ const Costs = (props: CostsProps) => {
   const icePrice = Math.round(ice * (icePricePrKg / 1000));
 
   const totalCost =
-    gingerPrice + sugarPrice + limePrice + vodkaPrice + icePrice;
+    gingerPrice + sugarPrice + limePrice + farrisPrice + vodkaPrice + icePrice;
 
   return (
     <div className="flex flex-col gap-2">
