@@ -11,7 +11,7 @@ type IngredientsProps = {};
 const Ingredients = (props: IngredientsProps) => {
   const {} = props;
 
-  const { fields, append, remove } = useFieldArray<
+  const { fields, append } = useFieldArray<
     NewDrinkFormType,
     "ingredients",
     "key"
@@ -45,7 +45,12 @@ const Ingredients = (props: IngredientsProps) => {
         <div className="w-full pb-2 flex justify-center">
           <PlusButton
             onClick={() =>
-              append({ ingredientForDrinkId: null, amount: 0, unit: "ML" })
+              append({
+                ingredientForDrinkId: null,
+                amount: 0,
+                unit: "ML",
+                ingredientId: 0,
+              })
             }
           />
         </div>
