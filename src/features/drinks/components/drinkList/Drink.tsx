@@ -19,7 +19,7 @@ const Drink = (props: Props) => {
   return (
     <tr>
       <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 ">
-        <Link href={drinkLink}>
+        <Link href={drinkLink} passHref>
           <p className="hover:underline cursor-pointer">{drink.drinkName}</p>
         </Link>
         {drink.variant && (
