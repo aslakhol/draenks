@@ -1,0 +1,70 @@
+ingredientId	ingredientName	description	deleted
+1	Lime		0
+28	Honey Ginger Syrup	Dissolve 3 parts honey, in 1 part water by weight. Simmer ginger in the syrup for 2 minutes before removing from heat and letting steep for 12 hours.	0
+31	Simple Syrup		0
+32	Vodka		0
+36	Bitters		0
+37	Angostura bitters		0
+38	Whisky		0
+39	Lemon juice	Freshly squeezed is preferred!	0
+40	Lime juice	Freshly squeezed is preferred!	0
+41	Orange		0
+42	Orange juice		0
+43	Lemon		0
+45	Demerara syrup		0
+46	Maraschino cherry		0
+47	Rye Whiskey		0
+48	Bourbon		0
+49	Scotch		0
+50	Gin		0
+51	Light rum		0
+52	Rum		0
+53	Dark rum		0
+54	Brandy		0
+55	Tequila		0
+56	Mezcal		0
+58	Sweet vermouth	Called Italian vermouth in The Savoy Cocktail Book	0
+59	Dry vermouth	Called French vermouth in The Savoy Cocktail Book	0
+61	Orange liqueur		0
+62	Triple Sec		0
+63	Cointreu		0
+64	Campari		0
+65	Aperol		0
+66	Absinthe		0
+67	Pastis		0
+68	Peychaud's bitters		0
+69	Orange bitters		0
+70	Green Chartreuse		0
+71	Luxardo Maraschino Liqueur		0
+72	Cognac		0
+73	Drambuie		0
+74	Egg white		0
+75	Club soda		0
+76	Black sesame seeds		0
+77	Blue curaçao		0
+78	Semi-rich simple syrup	A simple syrup made in a 1.5:1 sugar:water ratio by weight.	0
+79	Rich simple syrup	A simple syrup made in a 2:1 sugar:water ratio by weight.	0
+80	Ginger Beer		0
+81	Ginger		0
+82	Islay Scotch		0
+83	Champagne		0
+84	Pisco		0
+85	Aquafaba		0
+86	Sugar		0
+87	Cocchi Americano		0
+88	Orgeat		0
+89	Mint		0
+90	Cinnamon Syrup	1:5:1 Sugar and water by weight. Simmer a handful of cinnamon sticks for two minutes before removing from heat and letting steep for 12 hours before removing cinnamon.	0
+91	Apple juice		0
+92	Apple		0
+93	Calvados		0
+94	Julebrus	Norwegian julebrus, this should usually be brown and labeled 'Hamar & Lillehammar', but check with your company unless you're ready to fight a war.	0
+95	Red wine		0
+96	Orange Curaçao		0
+97	Grapefruit juice	grapefruit juice	0
+98	Orange Bitters	ass	0
+99	Dried Botanicals	1 oz = 2 tbsp	0
+100	Strawberry		0
+101	Ice		0
+102	Ginger syrup	1.5 kg ginger 1.5 l water 0.75 kg sugar Cut unpeeled ginger into rough chunks that are easily handled by a food processor and remove any mold or very soft parts in the process. Blend the ginger in a food processor to quickly chop it into small chunks, you will likely have to do this in several batches. Transfer all the ginger into a large pot and pour over an equal or slightly less amount of water. Bring the mixture to a boil and let it simmer gently for 2-3 hours under a lid. Extract the ginger pulp by pressing it in a cheesecloth or kitchen towel making sure to extract all of the juice. Heavy, heat-resistant gloves are recommended for this part as the mixture is quite hot on your hands. You should be left with a large pot of mostly pulp free ginger juice and a large pile of dry ginger pulp that can be discarded. Clean out any pulp remaining in the pot and transfer the ginger juice back. Now add the sugar and bring back up to a very slight boil and continuously stir until the sugar is dissolved. When dissolved take the syrup off the heat and let cool before transferring to containers and store in the fridge. The syrup should keep fine for a couple of weeks in the fridge.	0
+103	Farris		0
