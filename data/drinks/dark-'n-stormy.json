@@ -1,0 +1,28 @@
+{
+  "drinkId": 81,
+  "drinkName": "Dark 'N Stormy",
+  "description": "The Dark 'N Stormy is patented by Gosling, and as such a real Dark 'N Stormy uses Gosling's Black Seal Rum.",
+  "instructions": "Pour 4-5 oz of ginger beer into a glass with ice and with rum. Garnish with a lime wedge. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 344,
+      "amount": 4.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Ginger Beer", "ingredientId": 80 }
+    },
+    {
+      "ingredientForDrinkId": 345,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Lime", "ingredientId": 1 }
+    },
+    {
+      "ingredientForDrinkId": 346,
+      "amount": 1.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Dark rum", "ingredientId": 53 }
+    }
+  ]
+}

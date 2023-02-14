@@ -1,0 +1,37 @@
+{
+  "drinkId": 46,
+  "drinkName": "Death in the Afternoon",
+  "description": "",
+  "instructions": "Stir or shake absinthe, lemon juice, and syrup before pouring into a chilled glass. Top with champagne. \n\nYou can use any dry sparkling wine in place of the champagne, Krone Borealis Cuvée Brut works well.",
+  "variant": "Approachable",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 328,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Absinthe", "ingredientId": 66 }
+    },
+    {
+      "ingredientForDrinkId": 329,
+      "amount": 3,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Champagne", "ingredientId": 83 }
+    },
+    {
+      "ingredientForDrinkId": 330,
+      "amount": 0.25,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+    },
+    {
+      "ingredientForDrinkId": 331,
+      "amount": 0.25,
+      "unit": "OZ",
+      "ingredient": {
+        "ingredientName": "Semi-rich simple syrup",
+        "ingredientId": 78
+      }
+    }
+  ]
+}

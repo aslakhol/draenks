@@ -1,0 +1,34 @@
+{
+  "drinkId": 78,
+  "drinkName": "Negroni",
+  "description": "",
+  "instructions": "Stir the ingredients to chill and serve over ice. Express a orange peel over top for garnish.",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 311,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Sweet vermouth", "ingredientId": 58 }
+    },
+    {
+      "ingredientForDrinkId": 312,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Gin", "ingredientId": 50 }
+    },
+    {
+      "ingredientForDrinkId": 313,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Campari", "ingredientId": 64 }
+    },
+    {
+      "ingredientForDrinkId": 314,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Orange", "ingredientId": 41 }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "drinkId": 77,
+  "drinkName": "Sazerac",
+  "description": "",
+  "instructions": "Stir Rye, Cognac, Syrup and bitters with ice. Serve in a chilled, absinth-washed glass with no ice. Express the oils of a lemon peel over the drink and optionally leave it in for a garnish.",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 304,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Cognac", "ingredientId": 72 }
+    },
+    {
+      "ingredientForDrinkId": 305,
+      "amount": 1.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Rye Whiskey", "ingredientId": 47 }
+    },
+    {
+      "ingredientForDrinkId": 306,
+      "amount": 0.25,
+      "unit": "OZ",
+      "ingredient": {
+        "ingredientName": "Semi-rich simple syrup",
+        "ingredientId": 78
+      }
+    },
+    {
+      "ingredientForDrinkId": 307,
+      "amount": 3,
+      "unit": "DASH",
+      "ingredient": {
+        "ingredientName": "Peychaud's bitters",
+        "ingredientId": 68
+      }
+    },
+    {
+      "ingredientForDrinkId": 308,
+      "amount": 1,
+      "unit": "DASH",
+      "ingredient": {
+        "ingredientName": "Angostura bitters",
+        "ingredientId": 37
+      }
+    },
+    {
+      "ingredientForDrinkId": 309,
+      "amount": 1,
+      "unit": "WASH",
+      "ingredient": { "ingredientName": "Absinthe", "ingredientId": 66 }
+    },
+    {
+      "ingredientForDrinkId": 310,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Lemon", "ingredientId": 43 }
+    }
+  ]
+}

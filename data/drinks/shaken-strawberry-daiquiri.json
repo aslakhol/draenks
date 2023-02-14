@@ -1,0 +1,40 @@
+{
+  "drinkId": 94,
+  "drinkName": "Shaken Strawberry Daiquiri",
+  "description": "",
+  "instructions": "Muddle the strawberries. Add rum, lime juice and simple to the shaker and shake well with ice. Fine strain into a chilled glass and garnish with strawberry. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 401,
+      "amount": 2,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Light rum", "ingredientId": 51 }
+    },
+    {
+      "ingredientForDrinkId": 402,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Simple Syrup", "ingredientId": 31 }
+    },
+    {
+      "ingredientForDrinkId": 403,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+    },
+    {
+      "ingredientForDrinkId": 404,
+      "amount": 4,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Strawberry", "ingredientId": 100 }
+    },
+    {
+      "ingredientForDrinkId": 405,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Ice", "ingredientId": 101 }
+    }
+  ]
+}

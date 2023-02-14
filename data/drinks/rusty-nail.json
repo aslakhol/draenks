@@ -1,0 +1,28 @@
+{
+  "drinkId": 75,
+  "drinkName": "Rusty Nail",
+  "description": "",
+  "instructions": "Stir over ice and serve with ice. Express the oils from a lemon zest over top for a garnish.",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 286,
+      "amount": 2,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Scotch", "ingredientId": 49 }
+    },
+    {
+      "ingredientForDrinkId": 287,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Lemon", "ingredientId": 43 }
+    },
+    {
+      "ingredientForDrinkId": 288,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Drambuie", "ingredientId": 73 }
+    }
+  ]
+}

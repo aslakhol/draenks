@@ -1,0 +1,34 @@
+{
+  "drinkId": 79,
+  "drinkName": "Americano",
+  "description": "",
+  "instructions": "This drink is built in the glass. Add vermouth and Campari to the glass and top with soda and give it a little stir. Garnish with an orange wheel. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 315,
+      "amount": 1.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Campari", "ingredientId": 64 }
+    },
+    {
+      "ingredientForDrinkId": 316,
+      "amount": 1.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Sweet vermouth", "ingredientId": 58 }
+    },
+    {
+      "ingredientForDrinkId": 317,
+      "amount": 3,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Club soda", "ingredientId": 75 }
+    },
+    {
+      "ingredientForDrinkId": 318,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Orange", "ingredientId": 41 }
+    }
+  ]
+}

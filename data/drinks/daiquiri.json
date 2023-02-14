@@ -1,0 +1,28 @@
+{
+  "drinkId": 92,
+  "drinkName": "Daiquiri",
+  "description": "",
+  "instructions": "Shake and strain into chilled glass.",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 393,
+      "amount": 1.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Light rum", "ingredientId": 51 }
+    },
+    {
+      "ingredientForDrinkId": 394,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+    },
+    {
+      "ingredientForDrinkId": 395,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Simple Syrup", "ingredientId": 31 }
+    }
+  ]
+}

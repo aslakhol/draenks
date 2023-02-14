@@ -1,0 +1,40 @@
+{
+  "drinkId": 83,
+  "drinkName": "Corpse reviver No. 2",
+  "description": "Four of these taken in swift succession will unrevive the corpse again. - Harry Craddock",
+  "instructions": "Shake Gin, Cocchi Americano, Triple Sec and lemon juice with ice. Serve in a chilled, absinthe washed glass. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 352,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Gin", "ingredientId": 50 }
+    },
+    {
+      "ingredientForDrinkId": 354,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Cocchi Americano", "ingredientId": 87 }
+    },
+    {
+      "ingredientForDrinkId": 355,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Triple Sec", "ingredientId": 62 }
+    },
+    {
+      "ingredientForDrinkId": 356,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+    },
+    {
+      "ingredientForDrinkId": 357,
+      "amount": 1,
+      "unit": "WASH",
+      "ingredient": { "ingredientName": "Absinthe", "ingredientId": 66 }
+    }
+  ]
+}

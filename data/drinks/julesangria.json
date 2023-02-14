@@ -1,0 +1,52 @@
+{
+  "drinkId": 89,
+  "drinkName": "Julesangria",
+  "description": "The Christmas soda is very sweet so you would do well to pick a dry red wine, and make your cinnamon syrup extra dry. 0.5:1 sugar to water seems to work well.",
+  "instructions": "Mix all the liquid ingredients together and give it a light stir. Serve in a glass (or punch bowl) filled with slices of orange and green apples.",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 385,
+      "amount": 3,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Red wine", "ingredientId": 95 }
+    },
+    {
+      "ingredientForDrinkId": 386,
+      "amount": 3,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Julebrus", "ingredientId": 94 }
+    },
+    {
+      "ingredientForDrinkId": 387,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Cinnamon Syrup", "ingredientId": 90 }
+    },
+    {
+      "ingredientForDrinkId": 388,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Orange juice", "ingredientId": 42 }
+    },
+    {
+      "ingredientForDrinkId": 389,
+      "amount": 0.1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Orange bitters", "ingredientId": 69 }
+    },
+    {
+      "ingredientForDrinkId": 390,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Orange", "ingredientId": 41 }
+    },
+    {
+      "ingredientForDrinkId": 391,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Apple", "ingredientId": 92 }
+    }
+  ]
+}

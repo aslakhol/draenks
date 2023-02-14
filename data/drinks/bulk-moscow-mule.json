@@ -1,0 +1,34 @@
+{
+  "drinkId": 95,
+  "drinkName": "Bulk Moscow Mule",
+  "description": "This creates a 5l jug of mule at about 8-10% ABV",
+  "instructions": "In a large 5 liter jug with a pouring spout  combine the ginger, lime and liquor. Pour Farris over the mixture slowly to preserve as much carbonation as possible. Top with a bunch of ice and stir gently with a ladle. Top with more soda, ginger or lime to taste. Note that the mixture changes in flavour and dilution as the ice melts and cools the cocktail, so you might want to let it rest for a couple of minutes. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 406,
+      "amount": 1500,
+      "unit": "ML",
+      "ingredient": { "ingredientName": "Ginger syrup", "ingredientId": 102 }
+    },
+    {
+      "ingredientForDrinkId": 407,
+      "amount": 750,
+      "unit": "ML",
+      "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+    },
+    {
+      "ingredientForDrinkId": 408,
+      "amount": 1250,
+      "unit": "ML",
+      "ingredient": { "ingredientName": "Farris", "ingredientId": 103 }
+    },
+    {
+      "ingredientForDrinkId": 409,
+      "amount": 1000,
+      "unit": "ML",
+      "ingredient": { "ingredientName": "Vodka", "ingredientId": 32 }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "drinkId": 76,
+  "drinkName": "Manhattan",
+  "description": "",
+  "instructions": "",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 300,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Sweet vermouth", "ingredientId": 58 }
+    },
+    {
+      "ingredientForDrinkId": 301,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": {
+        "ingredientName": "Maraschino cherry",
+        "ingredientId": 46
+      }
+    },
+    {
+      "ingredientForDrinkId": 302,
+      "amount": 2,
+      "unit": "DASH",
+      "ingredient": {
+        "ingredientName": "Angostura bitters",
+        "ingredientId": 37
+      }
+    },
+    {
+      "ingredientForDrinkId": 303,
+      "amount": 2,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Rye Whiskey", "ingredientId": 47 }
+    }
+  ]
+}

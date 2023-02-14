@@ -1,0 +1,37 @@
+{
+  "drinkId": 51,
+  "drinkName": "Penicillin",
+  "description": "Supposedly cures the common cold!",
+  "instructions": "Shake all the ingredients before serving in a lowball glass. Alternatively, you could use a honey syrup in place of the honey-ginger syrup and muddle 3-4 slices of fresh ginger into the drink. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 322,
+      "amount": 2,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Scotch", "ingredientId": 49 }
+    },
+    {
+      "ingredientForDrinkId": 323,
+      "amount": 0.25,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Islay Scotch", "ingredientId": 82 }
+    },
+    {
+      "ingredientForDrinkId": 324,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+    },
+    {
+      "ingredientForDrinkId": 325,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": {
+        "ingredientName": "Honey Ginger Syrup",
+        "ingredientId": 28
+      }
+    }
+  ]
+}

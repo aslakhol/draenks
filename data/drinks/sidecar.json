@@ -1,0 +1,40 @@
+{
+  "drinkId": 82,
+  "drinkName": "Sidecar",
+  "description": "",
+  "instructions": "Start by sugaring a glass. Do this by tracing the rim of a glass with a lemon wedge and setting it upside down in a dish of sugar for a minute. Shake excess sugar off and put the glass in the freezer to chill. \n\nShake cognac, orange liqueur, lemon juice with ice before pouring into your chilled rimmed glass.",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 347,
+      "amount": 1.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Cognac", "ingredientId": 72 }
+    },
+    {
+      "ingredientForDrinkId": 348,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+    },
+    {
+      "ingredientForDrinkId": 349,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Orange liqueur", "ingredientId": 61 }
+    },
+    {
+      "ingredientForDrinkId": 350,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Lemon", "ingredientId": 43 }
+    },
+    {
+      "ingredientForDrinkId": 351,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Sugar", "ingredientId": 86 }
+    }
+  ]
+}

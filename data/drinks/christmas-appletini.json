@@ -1,0 +1,55 @@
+{
+  "drinkId": 86,
+  "drinkName": "Christmas Appletini",
+  "description": "",
+  "instructions": "Shake vodka, calvados, apple, and lemon juice with cinnamon syrup and pour into a chilled glass. Garnish with slices of apple  and a cherry. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 367,
+      "amount": 1.25,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Apple juice", "ingredientId": 91 }
+    },
+    {
+      "ingredientForDrinkId": 368,
+      "amount": 1.25,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Vodka", "ingredientId": 32 }
+    },
+    {
+      "ingredientForDrinkId": 369,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Apple", "ingredientId": 92 }
+    },
+    {
+      "ingredientForDrinkId": 370,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": {
+        "ingredientName": "Maraschino cherry",
+        "ingredientId": 46
+      }
+    },
+    {
+      "ingredientForDrinkId": 371,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Calvados", "ingredientId": 93 }
+    },
+    {
+      "ingredientForDrinkId": 372,
+      "amount": 0.25,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+    },
+    {
+      "ingredientForDrinkId": 373,
+      "amount": 0.25,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Cinnamon Syrup", "ingredientId": 90 }
+    }
+  ]
+}

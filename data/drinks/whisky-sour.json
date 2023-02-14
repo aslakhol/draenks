@@ -1,0 +1,49 @@
+{
+  "drinkId": 80,
+  "drinkName": "Whisky Sour",
+  "description": "",
+  "instructions": "Give the whisky, lemon, syrup, and egg white a dry shake for 10 seconds. Shake with ice to chill and dilute. Pour the drink into a chilled glass, let the foam settle for a minute, and top with three drops of bitters and the oils of one lemon peel.",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 338,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Demerara syrup", "ingredientId": 45 }
+    },
+    {
+      "ingredientForDrinkId": 339,
+      "amount": 1.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Whisky", "ingredientId": 38 }
+    },
+    {
+      "ingredientForDrinkId": 340,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Egg white", "ingredientId": 74 }
+    },
+    {
+      "ingredientForDrinkId": 341,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+    },
+    {
+      "ingredientForDrinkId": 342,
+      "amount": 3,
+      "unit": "DROP",
+      "ingredient": {
+        "ingredientName": "Angostura bitters",
+        "ingredientId": 37
+      }
+    },
+    {
+      "ingredientForDrinkId": 343,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Lemon", "ingredientId": 43 }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "drinkId": 43,
+  "drinkName": "Moscow Mule",
+  "description": "Tasty ginger goodness",
+  "instructions": "This drink can be built in the glass or shaken. \nIf shaken shake the Vodka and Lime juice and pour over ice. Top with ginger beer and serve with a lime wedge for garnish. \nAlternatively, build and stir in the glass and top with a lime wedge for garnish. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 319,
+      "amount": 2,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Vodka", "ingredientId": 32 }
+    },
+    {
+      "ingredientForDrinkId": 320,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+    },
+    {
+      "ingredientForDrinkId": 321,
+      "amount": 3,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Ginger Beer", "ingredientId": 80 }
+    }
+  ]
+}

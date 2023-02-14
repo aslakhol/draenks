@@ -1,0 +1,52 @@
+{
+  "drinkId": 50,
+  "drinkName": "Pisco sour",
+  "description": "The first Saturday of every February is Pisco Day!",
+  "instructions": "Add Pisco, lemon, lime, syrup, and egg white to a shaker and give it a dry shake for 10 seconds. Shake the cocktail with ice to chill and dilute before pouring it into a chilled glass. Top with three drops of Angostura. Let the drink sit for a minute to let the foam settle before serving. \n\nThe egg white can be substituted with aquafaba.",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 332,
+      "amount": 2,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Pisco", "ingredientId": 84 }
+    },
+    {
+      "ingredientForDrinkId": 333,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+    },
+    {
+      "ingredientForDrinkId": 334,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+    },
+    {
+      "ingredientForDrinkId": 335,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": {
+        "ingredientName": "Semi-rich simple syrup",
+        "ingredientId": 78
+      }
+    },
+    {
+      "ingredientForDrinkId": 336,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Egg white", "ingredientId": 74 }
+    },
+    {
+      "ingredientForDrinkId": 337,
+      "amount": 3,
+      "unit": "DROP",
+      "ingredient": {
+        "ingredientName": "Angostura bitters",
+        "ingredientId": 37
+      }
+    }
+  ]
+}

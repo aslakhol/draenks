@@ -1,0 +1,40 @@
+{
+  "drinkId": 85,
+  "drinkName": "Mojito",
+  "description": "",
+  "instructions": "Slap 10-12 mint leaves in your hand and throw them in a chilled collins glass. Rub the leaves lightly against the inside of the glass with a bar spoon. Shake the rum, lime juice, and syrup with ice. Fill your glass with ice and pour the cocktail in. Pull the mints up with a bar spoon and top with soda water. Garnish with another bunch of slapped mint. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 362,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+    },
+    {
+      "ingredientForDrinkId": 363,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Demerara syrup", "ingredientId": 45 }
+    },
+    {
+      "ingredientForDrinkId": 364,
+      "amount": 2,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Light rum", "ingredientId": 51 }
+    },
+    {
+      "ingredientForDrinkId": 365,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Club soda", "ingredientId": 75 }
+    },
+    {
+      "ingredientForDrinkId": 366,
+      "amount": 2,
+      "unit": "PC",
+      "ingredient": { "ingredientName": "Mint", "ingredientId": 89 }
+    }
+  ]
+}

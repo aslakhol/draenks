@@ -1,0 +1,34 @@
+{
+  "drinkId": 84,
+  "drinkName": "The Momisette",
+  "description": "",
+  "instructions": "Shake absinth, orgeat, and lemon juice. Pour into a chilled collins glass with ice at the same time as you pour in the soda water. ",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 358,
+      "amount": 1.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Absinthe", "ingredientId": 66 }
+    },
+    {
+      "ingredientForDrinkId": 359,
+      "amount": 2.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Club soda", "ingredientId": 75 }
+    },
+    {
+      "ingredientForDrinkId": 360,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+    },
+    {
+      "ingredientForDrinkId": 361,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Orgeat", "ingredientId": 88 }
+    }
+  ]
+}

@@ -27,6 +27,7 @@ const Ingredient = (props: IngredientProps) => {
         >
           {ingredient.ingredient.ingredientName}
         </td>
+
         <td className="whitespace-nowrap py-4 px-3 text-sm text-gray-500">
           {ingredient.amount} {ingredient.unit}
         </td>

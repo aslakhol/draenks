@@ -1,0 +1,55 @@
+{
+  "drinkId": 44,
+  "drinkName": "Polarpanda Fizz",
+  "description": "This drink was created for Team Fizz in the company Favrit to honor both the current team name (Fizz) and an earlier temporary name (Polarpanda).",
+  "instructions": "Mix gin, lemon juice, simple syrup, egg white, and blue curacao in a shaker and dry shake for 10 seconds. Add ice and shake until chilled. \nPour in a small chilled highball and top with soda water. Garnish with a good layer of black sesame seeds and serve with a bamboo straw.",
+  "variant": "",
+  "deleted": false,
+  "ingredients": [
+    {
+      "ingredientForDrinkId": 293,
+      "amount": 2,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Gin", "ingredientId": 50 }
+    },
+    {
+      "ingredientForDrinkId": 294,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+    },
+    {
+      "ingredientForDrinkId": 295,
+      "amount": 0.75,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Simple Syrup", "ingredientId": 31 }
+    },
+    {
+      "ingredientForDrinkId": 296,
+      "amount": 0.5,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Egg white", "ingredientId": 74 }
+    },
+    {
+      "ingredientForDrinkId": 297,
+      "amount": 1,
+      "unit": "OZ",
+      "ingredient": { "ingredientName": "Club soda", "ingredientId": 75 }
+    },
+    {
+      "ingredientForDrinkId": 298,
+      "amount": 1,
+      "unit": "PC",
+      "ingredient": {
+        "ingredientName": "Black sesame seeds",
+        "ingredientId": 76
+      }
+    },
+    {
+      "ingredientForDrinkId": 299,
+      "amount": 1,
+      "unit": "BARSPOON",
+      "ingredient": { "ingredientName": "Blue curaçao", "ingredientId": 77 }
+    }
+  ]
+}
