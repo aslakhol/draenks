@@ -1,0 +1,170 @@
+[
+  {
+    "ingredientId": 37,
+    "ingredientName": "Angostura bitters",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 36,
+    "ingredientName": "Bitters",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 48,
+    "ingredientName": "Bourbon",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 54,
+    "ingredientName": "Brandy",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 53,
+    "ingredientName": "Dark rum",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 45,
+    "ingredientName": "Demerara syrup",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 59,
+    "ingredientName": "Dry vermouth",
+    "description": "Called French vermouth in The Savoy Cocktail Book",
+    "deleted": false
+  },
+  {
+    "ingredientId": 50,
+    "ingredientName": "Gin",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 28,
+    "ingredientName": "Honey Ginger Syrup",
+    "description": "Dissolve 3 parts honey, in 1 part water by weight. Simmer ginger in the syrup for 2 minutes before removing from heat and letting steep for 12 hours.",
+    "deleted": false
+  },
+  {
+    "ingredientId": 39,
+    "ingredientName": "Lemon juice",
+    "description": "Freshly squeezed is preferred! ",
+    "deleted": false
+  },
+  {
+    "ingredientId": 43,
+    "ingredientName": "Lemon",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 51,
+    "ingredientName": "Light rum",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 40,
+    "ingredientName": "Lime juice",
+    "description": "Freshly squeezed is preferred!",
+    "deleted": false
+  },
+  {
+    "ingredientId": 1,
+    "ingredientName": "Lime",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 46,
+    "ingredientName": "Maraschino cherry",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 56,
+    "ingredientName": "Mezcal",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 42,
+    "ingredientName": "Orange juice",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 61,
+    "ingredientName": "Orange liqueur",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 41,
+    "ingredientName": "Orange",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 52,
+    "ingredientName": "Rum",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 47,
+    "ingredientName": "Rye Whiskey",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 49,
+    "ingredientName": "Scotch",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 31,
+    "ingredientName": "Simple Syrup",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 58,
+    "ingredientName": "Sweet vermouth",
+    "description": "Called Italian vermouth in The Savoy Cocktail Book",
+    "deleted": false
+  },
+  {
+    "ingredientId": 55,
+    "ingredientName": "Tequila",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 62,
+    "ingredientName": "Triple Sec",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 32,
+    "ingredientName": "Vodka",
+    "description": "",
+    "deleted": false
+  },
+  {
+    "ingredientId": 38,
+    "ingredientName": "Whisky",
+    "description": "",
+    "deleted": false
+  }
+]

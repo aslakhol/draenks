@@ -1,0 +1,950 @@
+[
+  {
+    "drinkId": 79,
+    "drinkName": "Americano",
+    "description": "",
+    "instructions": "This drink is built in the glass. Add vermouth and Campari to the glass and top with soda and give it a little stir. Garnish with an orange wheel. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 315,
+        "amount": 1.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Campari", "ingredientId": 64 }
+      },
+      {
+        "ingredientForDrinkId": 316,
+        "amount": 1.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Sweet vermouth", "ingredientId": 58 }
+      },
+      {
+        "ingredientForDrinkId": 317,
+        "amount": 3,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Club soda", "ingredientId": 75 }
+      },
+      {
+        "ingredientForDrinkId": 318,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Orange", "ingredientId": 41 }
+      }
+    ]
+  },
+  {
+    "drinkId": 95,
+    "drinkName": "Bulk Moscow Mule",
+    "description": "This creates a 5l jug of mule at about 8-10% ABV",
+    "instructions": "In a large 5 liter jug with a pouring spout  combine the ginger, lime and liquor. Pour Farris over the mixture slowly to preserve as much carbonation as possible. Top with a bunch of ice and stir gently with a ladle. Top with more soda, ginger or lime to taste. Note that the mixture changes in flavour and dilution as the ice melts and cools the cocktail, so you might want to let it rest for a couple of minutes. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 406,
+        "amount": 1500,
+        "unit": "ML",
+        "ingredient": { "ingredientName": "Ginger syrup", "ingredientId": 102 }
+      },
+      {
+        "ingredientForDrinkId": 407,
+        "amount": 750,
+        "unit": "ML",
+        "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+      },
+      {
+        "ingredientForDrinkId": 408,
+        "amount": 1250,
+        "unit": "ML",
+        "ingredient": { "ingredientName": "Farris", "ingredientId": 103 }
+      },
+      {
+        "ingredientForDrinkId": 409,
+        "amount": 1000,
+        "unit": "ML",
+        "ingredient": { "ingredientName": "Vodka", "ingredientId": 32 }
+      }
+    ]
+  },
+  {
+    "drinkId": 86,
+    "drinkName": "Christmas Appletini",
+    "description": "",
+    "instructions": "Shake vodka, calvados, apple, and lemon juice with cinnamon syrup and pour into a chilled glass. Garnish with slices of apple  and a cherry. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 367,
+        "amount": 1.25,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Apple juice", "ingredientId": 91 }
+      },
+      {
+        "ingredientForDrinkId": 368,
+        "amount": 1.25,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Vodka", "ingredientId": 32 }
+      },
+      {
+        "ingredientForDrinkId": 369,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Apple", "ingredientId": 92 }
+      },
+      {
+        "ingredientForDrinkId": 370,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": {
+          "ingredientName": "Maraschino cherry",
+          "ingredientId": 46
+        }
+      },
+      {
+        "ingredientForDrinkId": 371,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Calvados", "ingredientId": 93 }
+      },
+      {
+        "ingredientForDrinkId": 372,
+        "amount": 0.25,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+      },
+      {
+        "ingredientForDrinkId": 373,
+        "amount": 0.25,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Cinnamon Syrup", "ingredientId": 90 }
+      }
+    ]
+  },
+  {
+    "drinkId": 83,
+    "drinkName": "Corpse reviver No. 2",
+    "description": "Four of these taken in swift succession will unrevive the corpse again. - Harry Craddock",
+    "instructions": "Shake Gin, Cocchi Americano, Triple Sec and lemon juice with ice. Serve in a chilled, absinthe washed glass. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 352,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Gin", "ingredientId": 50 }
+      },
+      {
+        "ingredientForDrinkId": 354,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": {
+          "ingredientName": "Cocchi Americano",
+          "ingredientId": 87
+        }
+      },
+      {
+        "ingredientForDrinkId": 355,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Triple Sec", "ingredientId": 62 }
+      },
+      {
+        "ingredientForDrinkId": 356,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+      },
+      {
+        "ingredientForDrinkId": 357,
+        "amount": 1,
+        "unit": "WASH",
+        "ingredient": { "ingredientName": "Absinthe", "ingredientId": 66 }
+      }
+    ]
+  },
+  {
+    "drinkId": 92,
+    "drinkName": "Daiquiri",
+    "description": "",
+    "instructions": "Shake and strain into chilled glass.",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 393,
+        "amount": 1.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Light rum", "ingredientId": 51 }
+      },
+      {
+        "ingredientForDrinkId": 394,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+      },
+      {
+        "ingredientForDrinkId": 395,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Simple Syrup", "ingredientId": 31 }
+      }
+    ]
+  },
+  {
+    "drinkId": 81,
+    "drinkName": "Dark 'N Stormy",
+    "description": "The Dark 'N Stormy is patented by Gosling, and as such a real Dark 'N Stormy uses Gosling's Black Seal Rum.",
+    "instructions": "Pour 4-5 oz of ginger beer into a glass with ice and with rum. Garnish with a lime wedge. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 344,
+        "amount": 4.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Ginger Beer", "ingredientId": 80 }
+      },
+      {
+        "ingredientForDrinkId": 345,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Lime", "ingredientId": 1 }
+      },
+      {
+        "ingredientForDrinkId": 346,
+        "amount": 1.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Dark rum", "ingredientId": 53 }
+      }
+    ]
+  },
+  {
+    "drinkId": 46,
+    "drinkName": "Death in the Afternoon",
+    "description": "",
+    "instructions": "Stir or shake absinthe, lemon juice, and syrup before pouring into a chilled glass. Top with champagne. \n\nYou can use any dry sparkling wine in place of the champagne, Krone Borealis Cuvée Brut works well.",
+    "variant": "Approachable",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 328,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Absinthe", "ingredientId": 66 }
+      },
+      {
+        "ingredientForDrinkId": 329,
+        "amount": 3,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Champagne", "ingredientId": 83 }
+      },
+      {
+        "ingredientForDrinkId": 330,
+        "amount": 0.25,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+      },
+      {
+        "ingredientForDrinkId": 331,
+        "amount": 0.25,
+        "unit": "OZ",
+        "ingredient": {
+          "ingredientName": "Semi-rich simple syrup",
+          "ingredientId": 78
+        }
+      }
+    ]
+  },
+  {
+    "drinkId": 45,
+    "drinkName": "Death in the Afternoon",
+    "description": "Drink 3-5 of these slowly. - Ernest Hemingway ",
+    "instructions": "Pour the absinthe into a chilled glass and top with chilled champagne until it becomes cloudy. \n\nYou can use any dry sparkling wine in place of the champagne, Krone Borealis Cuvée Brut works well.",
+    "variant": "Original",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 326,
+        "amount": 1.5,
+        "unit": "ML",
+        "ingredient": { "ingredientName": "Absinthe", "ingredientId": 66 }
+      },
+      {
+        "ingredientForDrinkId": 327,
+        "amount": 4.5,
+        "unit": "DASH",
+        "ingredient": { "ingredientName": "Champagne", "ingredientId": 83 }
+      }
+    ]
+  },
+  {
+    "drinkId": 93,
+    "drinkName": "Frozen Strawberry Daiquiri",
+    "description": "",
+    "instructions": "Blend the rum, simple syrup, lime juice, strawberries with a cup of ice at high speed until smooth. Pour into a chilled glass and garnish with strawberry. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 396,
+        "amount": 2,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Light rum", "ingredientId": 51 }
+      },
+      {
+        "ingredientForDrinkId": 397,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Simple Syrup", "ingredientId": 31 }
+      },
+      {
+        "ingredientForDrinkId": 398,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+      },
+      {
+        "ingredientForDrinkId": 399,
+        "amount": 4,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Strawberry", "ingredientId": 100 }
+      },
+      {
+        "ingredientForDrinkId": 400,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Ice", "ingredientId": 101 }
+      }
+    ]
+  },
+  {
+    "drinkId": 89,
+    "drinkName": "Julesangria",
+    "description": "The Christmas soda is very sweet so you would do well to pick a dry red wine, and make your cinnamon syrup extra dry. 0.5:1 sugar to water seems to work well.",
+    "instructions": "Mix all the liquid ingredients together and give it a light stir. Serve in a glass (or punch bowl) filled with slices of orange and green apples.",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 385,
+        "amount": 3,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Red wine", "ingredientId": 95 }
+      },
+      {
+        "ingredientForDrinkId": 386,
+        "amount": 3,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Julebrus", "ingredientId": 94 }
+      },
+      {
+        "ingredientForDrinkId": 387,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Cinnamon Syrup", "ingredientId": 90 }
+      },
+      {
+        "ingredientForDrinkId": 388,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Orange juice", "ingredientId": 42 }
+      },
+      {
+        "ingredientForDrinkId": 389,
+        "amount": 0.1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Orange bitters", "ingredientId": 69 }
+      },
+      {
+        "ingredientForDrinkId": 390,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Orange", "ingredientId": 41 }
+      },
+      {
+        "ingredientForDrinkId": 391,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Apple", "ingredientId": 92 }
+      }
+    ]
+  },
+  {
+    "drinkId": 76,
+    "drinkName": "Manhattan",
+    "description": "",
+    "instructions": "",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 300,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Sweet vermouth", "ingredientId": 58 }
+      },
+      {
+        "ingredientForDrinkId": 301,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": {
+          "ingredientName": "Maraschino cherry",
+          "ingredientId": 46
+        }
+      },
+      {
+        "ingredientForDrinkId": 302,
+        "amount": 2,
+        "unit": "DASH",
+        "ingredient": {
+          "ingredientName": "Angostura bitters",
+          "ingredientId": 37
+        }
+      },
+      {
+        "ingredientForDrinkId": 303,
+        "amount": 2,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Rye Whiskey", "ingredientId": 47 }
+      }
+    ]
+  },
+  {
+    "drinkId": 85,
+    "drinkName": "Mojito",
+    "description": "",
+    "instructions": "Slap 10-12 mint leaves in your hand and throw them in a chilled collins glass. Rub the leaves lightly against the inside of the glass with a bar spoon. Shake the rum, lime juice, and syrup with ice. Fill your glass with ice and pour the cocktail in. Pull the mints up with a bar spoon and top with soda water. Garnish with another bunch of slapped mint. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 362,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+      },
+      {
+        "ingredientForDrinkId": 363,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Demerara syrup", "ingredientId": 45 }
+      },
+      {
+        "ingredientForDrinkId": 364,
+        "amount": 2,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Light rum", "ingredientId": 51 }
+      },
+      {
+        "ingredientForDrinkId": 365,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Club soda", "ingredientId": 75 }
+      },
+      {
+        "ingredientForDrinkId": 366,
+        "amount": 2,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Mint", "ingredientId": 89 }
+      }
+    ]
+  },
+  {
+    "drinkId": 43,
+    "drinkName": "Moscow Mule",
+    "description": "Tasty ginger goodness",
+    "instructions": "This drink can be built in the glass or shaken. \nIf shaken shake the Vodka and Lime juice and pour over ice. Top with ginger beer and serve with a lime wedge for garnish. \nAlternatively, build and stir in the glass and top with a lime wedge for garnish. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 319,
+        "amount": 2,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Vodka", "ingredientId": 32 }
+      },
+      {
+        "ingredientForDrinkId": 320,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+      },
+      {
+        "ingredientForDrinkId": 321,
+        "amount": 3,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Ginger Beer", "ingredientId": 80 }
+      }
+    ]
+  },
+  {
+    "drinkId": 78,
+    "drinkName": "Negroni",
+    "description": "",
+    "instructions": "Stir the ingredients to chill and serve over ice. Express a orange peel over top for garnish.",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 311,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Sweet vermouth", "ingredientId": 58 }
+      },
+      {
+        "ingredientForDrinkId": 312,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Gin", "ingredientId": 50 }
+      },
+      {
+        "ingredientForDrinkId": 313,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Campari", "ingredientId": 64 }
+      },
+      {
+        "ingredientForDrinkId": 314,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Orange", "ingredientId": 41 }
+      }
+    ]
+  },
+  {
+    "drinkId": 88,
+    "drinkName": "Pegu Club",
+    "description": "",
+    "instructions": "Shake with ice and strain into a chilled cocktail glass. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 381,
+        "amount": 1.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Gin", "ingredientId": 50 }
+      },
+      {
+        "ingredientForDrinkId": 382,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+      },
+      {
+        "ingredientForDrinkId": 383,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Orange Curaçao", "ingredientId": 96 }
+      },
+      {
+        "ingredientForDrinkId": 384,
+        "amount": 2,
+        "unit": "DROP",
+        "ingredient": {
+          "ingredientName": "Angostura bitters",
+          "ingredientId": 37
+        }
+      }
+    ]
+  },
+  {
+    "drinkId": 51,
+    "drinkName": "Penicillin",
+    "description": "Supposedly cures the common cold!",
+    "instructions": "Shake all the ingredients before serving in a lowball glass. Alternatively, you could use a honey syrup in place of the honey-ginger syrup and muddle 3-4 slices of fresh ginger into the drink. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 322,
+        "amount": 2,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Scotch", "ingredientId": 49 }
+      },
+      {
+        "ingredientForDrinkId": 323,
+        "amount": 0.25,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Islay Scotch", "ingredientId": 82 }
+      },
+      {
+        "ingredientForDrinkId": 324,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+      },
+      {
+        "ingredientForDrinkId": 325,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": {
+          "ingredientName": "Honey Ginger Syrup",
+          "ingredientId": 28
+        }
+      }
+    ]
+  },
+  {
+    "drinkId": 50,
+    "drinkName": "Pisco sour",
+    "description": "The first Saturday of every February is Pisco Day!",
+    "instructions": "Add Pisco, lemon, lime, syrup, and egg white to a shaker and give it a dry shake for 10 seconds. Shake the cocktail with ice to chill and dilute before pouring it into a chilled glass. Top with three drops of Angostura. Let the drink sit for a minute to let the foam settle before serving. \n\nThe egg white can be substituted with aquafaba.",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 332,
+        "amount": 2,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Pisco", "ingredientId": 84 }
+      },
+      {
+        "ingredientForDrinkId": 333,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+      },
+      {
+        "ingredientForDrinkId": 334,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+      },
+      {
+        "ingredientForDrinkId": 335,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": {
+          "ingredientName": "Semi-rich simple syrup",
+          "ingredientId": 78
+        }
+      },
+      {
+        "ingredientForDrinkId": 336,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Egg white", "ingredientId": 74 }
+      },
+      {
+        "ingredientForDrinkId": 337,
+        "amount": 3,
+        "unit": "DROP",
+        "ingredient": {
+          "ingredientName": "Angostura bitters",
+          "ingredientId": 37
+        }
+      }
+    ]
+  },
+  {
+    "drinkId": 44,
+    "drinkName": "Polarpanda Fizz",
+    "description": "This drink was created for Team Fizz in the company Favrit to honor both the current team name (Fizz) and an earlier temporary name (Polarpanda).",
+    "instructions": "Mix gin, lemon juice, simple syrup, egg white, and blue curacao in a shaker and dry shake for 10 seconds. Add ice and shake until chilled. \nPour in a small chilled highball and top with soda water. Garnish with a good layer of black sesame seeds and serve with a bamboo straw.",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 293,
+        "amount": 2,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Gin", "ingredientId": 50 }
+      },
+      {
+        "ingredientForDrinkId": 294,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+      },
+      {
+        "ingredientForDrinkId": 295,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Simple Syrup", "ingredientId": 31 }
+      },
+      {
+        "ingredientForDrinkId": 296,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Egg white", "ingredientId": 74 }
+      },
+      {
+        "ingredientForDrinkId": 297,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Club soda", "ingredientId": 75 }
+      },
+      {
+        "ingredientForDrinkId": 298,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": {
+          "ingredientName": "Black sesame seeds",
+          "ingredientId": 76
+        }
+      },
+      {
+        "ingredientForDrinkId": 299,
+        "amount": 1,
+        "unit": "BARSPOON",
+        "ingredient": { "ingredientName": "Blue curaçao", "ingredientId": 77 }
+      }
+    ]
+  },
+  {
+    "drinkId": 75,
+    "drinkName": "Rusty Nail",
+    "description": "",
+    "instructions": "Stir over ice and serve with ice. Express the oils from a lemon zest over top for a garnish.",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 286,
+        "amount": 2,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Scotch", "ingredientId": 49 }
+      },
+      {
+        "ingredientForDrinkId": 287,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Lemon", "ingredientId": 43 }
+      },
+      {
+        "ingredientForDrinkId": 288,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Drambuie", "ingredientId": 73 }
+      }
+    ]
+  },
+  {
+    "drinkId": 77,
+    "drinkName": "Sazerac",
+    "description": "",
+    "instructions": "Stir Rye, Cognac, Syrup and bitters with ice. Serve in a chilled, absinth-washed glass with no ice. Express the oils of a lemon peel over the drink and optionally leave it in for a garnish.",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 304,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Cognac", "ingredientId": 72 }
+      },
+      {
+        "ingredientForDrinkId": 305,
+        "amount": 1.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Rye Whiskey", "ingredientId": 47 }
+      },
+      {
+        "ingredientForDrinkId": 306,
+        "amount": 0.25,
+        "unit": "OZ",
+        "ingredient": {
+          "ingredientName": "Semi-rich simple syrup",
+          "ingredientId": 78
+        }
+      },
+      {
+        "ingredientForDrinkId": 307,
+        "amount": 3,
+        "unit": "DASH",
+        "ingredient": {
+          "ingredientName": "Peychaud's bitters",
+          "ingredientId": 68
+        }
+      },
+      {
+        "ingredientForDrinkId": 308,
+        "amount": 1,
+        "unit": "DASH",
+        "ingredient": {
+          "ingredientName": "Angostura bitters",
+          "ingredientId": 37
+        }
+      },
+      {
+        "ingredientForDrinkId": 309,
+        "amount": 1,
+        "unit": "WASH",
+        "ingredient": { "ingredientName": "Absinthe", "ingredientId": 66 }
+      },
+      {
+        "ingredientForDrinkId": 310,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Lemon", "ingredientId": 43 }
+      }
+    ]
+  },
+  {
+    "drinkId": 94,
+    "drinkName": "Shaken Strawberry Daiquiri",
+    "description": "",
+    "instructions": "Muddle the strawberries. Add rum, lime juice and simple to the shaker and shake well with ice. Fine strain into a chilled glass and garnish with strawberry. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 401,
+        "amount": 2,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Light rum", "ingredientId": 51 }
+      },
+      {
+        "ingredientForDrinkId": 402,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Simple Syrup", "ingredientId": 31 }
+      },
+      {
+        "ingredientForDrinkId": 403,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lime juice", "ingredientId": 40 }
+      },
+      {
+        "ingredientForDrinkId": 404,
+        "amount": 4,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Strawberry", "ingredientId": 100 }
+      },
+      {
+        "ingredientForDrinkId": 405,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Ice", "ingredientId": 101 }
+      }
+    ]
+  },
+  {
+    "drinkId": 82,
+    "drinkName": "Sidecar",
+    "description": "",
+    "instructions": "Start by sugaring a glass. Do this by tracing the rim of a glass with a lemon wedge and setting it upside down in a dish of sugar for a minute. Shake excess sugar off and put the glass in the freezer to chill. \n\nShake cognac, orange liqueur, lemon juice with ice before pouring into your chilled rimmed glass.",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 347,
+        "amount": 1.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Cognac", "ingredientId": 72 }
+      },
+      {
+        "ingredientForDrinkId": 348,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+      },
+      {
+        "ingredientForDrinkId": 349,
+        "amount": 1,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Orange liqueur", "ingredientId": 61 }
+      },
+      {
+        "ingredientForDrinkId": 350,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Lemon", "ingredientId": 43 }
+      },
+      {
+        "ingredientForDrinkId": 351,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Sugar", "ingredientId": 86 }
+      }
+    ]
+  },
+  {
+    "drinkId": 84,
+    "drinkName": "The Momisette",
+    "description": "",
+    "instructions": "Shake absinth, orgeat, and lemon juice. Pour into a chilled collins glass with ice at the same time as you pour in the soda water. ",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 358,
+        "amount": 1.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Absinthe", "ingredientId": 66 }
+      },
+      {
+        "ingredientForDrinkId": 359,
+        "amount": 2.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Club soda", "ingredientId": 75 }
+      },
+      {
+        "ingredientForDrinkId": 360,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+      },
+      {
+        "ingredientForDrinkId": 361,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Orgeat", "ingredientId": 88 }
+      }
+    ]
+  },
+  {
+    "drinkId": 80,
+    "drinkName": "Whisky Sour",
+    "description": "",
+    "instructions": "Give the whisky, lemon, syrup, and egg white a dry shake for 10 seconds. Shake with ice to chill and dilute. Pour the drink into a chilled glass, let the foam settle for a minute, and top with three drops of bitters and the oils of one lemon peel.",
+    "variant": "",
+    "deleted": false,
+    "ingredients": [
+      {
+        "ingredientForDrinkId": 338,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Demerara syrup", "ingredientId": 45 }
+      },
+      {
+        "ingredientForDrinkId": 339,
+        "amount": 1.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Whisky", "ingredientId": 38 }
+      },
+      {
+        "ingredientForDrinkId": 340,
+        "amount": 0.5,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Egg white", "ingredientId": 74 }
+      },
+      {
+        "ingredientForDrinkId": 341,
+        "amount": 0.75,
+        "unit": "OZ",
+        "ingredient": { "ingredientName": "Lemon juice", "ingredientId": 39 }
+      },
+      {
+        "ingredientForDrinkId": 342,
+        "amount": 3,
+        "unit": "DROP",
+        "ingredient": {
+          "ingredientName": "Angostura bitters",
+          "ingredientId": 37
+        }
+      },
+      {
+        "ingredientForDrinkId": 343,
+        "amount": 1,
+        "unit": "PC",
+        "ingredient": { "ingredientName": "Lemon", "ingredientId": 43 }
+      }
+    ]
+  }
+]
