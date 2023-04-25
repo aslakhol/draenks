@@ -2,6 +2,8 @@ import { trpc } from "@/utils/trpc";
 import { Drinks, MeasuringUnit } from "@prisma/client";
 import Link from "next/link";
 import EditDrink from "../edit/EditDrink";
+import { zodDrink } from "../../../../backend/utils/zod";
+import { z } from "zod";
 
 type Props = {
   drinkId: number;
@@ -52,17 +54,7 @@ const Drink = (props: Props) => {
 
 export default Drink;
 
-type InputDrink = Drinks & {
-  ingredients: {
-    ingredientForDrinkId: number;
-    amount: number;
-    unit: MeasuringUnit;
-    ingredient: {
-      ingredientName: string;
-      ingredientId: number;
-    };
-  }[];
-};
+type InputDrink = z.infer<typeof zodDrink>;
 
 const prepareJson = (drink: InputDrink) => {
   const json = JSON.stringify(drink);
