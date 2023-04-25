@@ -1,30 +1,23 @@
 import * as trpc from "@trpc/server";
 import { z } from "zod";
-import { prisma } from "@/backend/utils/prisma";
 import { newDrinkFormSchema } from "@/features/drinks/formValidation";
-import { upsertIngredientsForDrink } from "../utils/ingredientForDrink";
 import { newIngredientFormSchema } from "@/features/ingredients/formValidation";
+import path from "path";
+import { promises as fs } from "fs";
+import { zodDrinks, zodIngredients } from "../utils/zod";
 
 export const appRouter = trpc
   .router()
   .query("drink", {
     input: z.object({ drinkId: z.number() }),
     resolve: async ({ input }) => {
-      const drink = await prisma.drinks.findFirst({
-        where: { drinkId: input.drinkId },
-        include: {
-          ingredients: {
-            select: {
-              ingredientForDrinkId: true,
-              amount: true,
-              unit: true,
-              ingredient: {
-                select: { ingredientName: true, ingredientId: true },
-              },
-            },
-          },
-        },
-      });
+      const fp = path.join(process.cwd(), "data", "drinks.json");
+      const drinks = await fs
+        .readFile(fp, "utf8")
+        .then((result) => JSON.parse(result))
+        .then((result) => zodDrinks.parse(result));
+
+      const drink = drinks.find((d) => d.drinkId === input.drinkId);
 
       return drink;
     },
@@ -32,57 +25,51 @@ export const appRouter = trpc
   .query("drinkForEdit", {
     input: z.object({ drinkId: z.number() }),
     resolve: async ({ input }) => {
-      const drink = await prisma.drinks.findFirst({
-        where: { drinkId: input.drinkId },
-        include: {
-          ingredients: true,
-        },
-      });
-
-      return drink;
+      throw new Error("Not implemented");
     },
   })
   .query("drinks", {
-    resolve: () => {
-      return prisma.drinks.findMany({
-        include: {
-          ingredients: {
-            select: {
-              ingredientForDrinkId: true,
-              ingredient: {
-                select: { ingredientName: true, ingredientId: true },
-              },
-            },
-          },
-        },
-      });
+    resolve: async () => {
+      const fp = path.join(process.cwd(), "data", "drinks.json");
+      const drinks = await fs
+        .readFile(fp, "utf8")
+        .then((result) => JSON.parse(result))
+        .then((result) => zodDrinks.parse(result));
+
+      return drinks;
     },
   })
   .query("ingredient", {
     input: z.object({ ingredientId: z.number() }),
     resolve: async ({ input }) => {
-      const ingredient = await prisma.ingredients.findFirst({
-        where: { ingredientId: input.ingredientId },
-      });
+      const fp = path.join(process.cwd(), "data", "ingredients.json");
+      const ingredients = await fs
+        .readFile(fp, "utf8")
+        .then((result) => JSON.parse(result))
+        .then((result) => zodIngredients.parse(result));
+
+      const ingredient = ingredients.find(
+        (i) => i.ingredientId === input.ingredientId
+      );
 
       return ingredient;
     },
   })
   .query("ingredients", {
     resolve: async () => {
-      const ingredients = await prisma.ingredients.findMany();
+      const fp = path.join(process.cwd(), "data", "ingredients.json");
+      const ingredients = await fs
+        .readFile(fp, "utf8")
+        .then((result) => JSON.parse(result))
+        .then((result) => zodIngredients.parse(result));
 
-      return ingredients.filter((ingredients) => !ingredients.deleted);
+      return ingredients;
     },
   })
   .mutation("create-ingredient", {
     input: newIngredientFormSchema,
     resolve: async ({ input }) => {
-      const ingredientInDb = await prisma.ingredients.create({
-        data: { ...input },
-      });
-
-      return { ingredient: ingredientInDb };
+      throw new Error("Not implemented");
     },
   })
   .mutation("edit-ingredient", {
@@ -91,43 +78,19 @@ export const appRouter = trpc
       ingredient: newIngredientFormSchema,
     }),
     resolve: async ({ input }) => {
-      const { ingredientId, ingredient } = input;
-
-      const drinkInDb = await prisma.ingredients.update({
-        where: { ingredientId: ingredientId },
-        data: {
-          ...ingredient,
-        },
-      });
-
-      return { drink: drinkInDb };
+      throw new Error("Not implemented");
     },
   })
   .mutation("delete-ingredient", {
     input: z.object({ ingredientId: z.number() }),
     resolve: async ({ input }) => {
-      const { ingredientId } = input;
-
-      await prisma.ingredients.delete({
-        where: { ingredientId: ingredientId },
-      });
+      throw new Error("Not implemented");
     },
   })
   .mutation("create-drink", {
     input: newDrinkFormSchema,
     resolve: async ({ input }) => {
-      const { ingredients, ...drink } = input;
-
-      const ingredientsWithOutId = ingredients.map((i) => {
-        const { ingredientForDrinkId, ...withoutId } = i;
-        return withoutId;
-      });
-
-      const drinkInDb = await prisma.drinks.create({
-        data: { ...drink, ingredients: { create: [...ingredientsWithOutId] } },
-      });
-
-      return { drink: drinkInDb };
+      throw new Error("Not implemented");
     },
   })
   .mutation("edit-drink", {
@@ -136,27 +99,13 @@ export const appRouter = trpc
       drink: newDrinkFormSchema,
     }),
     resolve: async ({ input }) => {
-      const { drinkId, drink } = input;
-      const { ingredients, ...drinkWithoutIngredients } = drink;
-
-      await upsertIngredientsForDrink(drinkId, ingredients);
-
-      const drinkInDb = await prisma.drinks.update({
-        where: { drinkId: drinkId },
-        data: {
-          ...drinkWithoutIngredients,
-        },
-      });
-
-      return { drink: drinkInDb };
+      throw new Error("Not implemented");
     },
   })
   .mutation("delete-drink", {
     input: z.object({ drinkId: z.number() }),
     resolve: async ({ input }) => {
-      const { drinkId } = input;
-
-      await prisma.drinks.delete({ where: { drinkId: drinkId } });
+      throw new Error("Not implemented");
     },
   });
 

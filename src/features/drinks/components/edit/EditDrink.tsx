@@ -20,7 +20,7 @@ const EditDrink = (props: EditDrinkProps) => {
         onClick={() => setModalOpen(true)}
         className="text-indigo-600 hover:text-indigo-900"
       >
-        Edit<span className="sr-only">, {drink.drinkName}</span>
+        Edit
       </button>
       {modalOpen && (
         <EditDrinkModal

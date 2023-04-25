@@ -6,14 +6,14 @@ import {
   newIngredientFormSchema,
   NewIngredientFormType,
 } from "../../formValidation";
-import type { Ingredients } from "@prisma/client";
 import Modal from "@/components/Modal/Modal";
 import IngredientForm from "../form/IngredientForm";
+import { Ingredient } from "../../../../backend/utils/zod";
 
 type EditIngredientModalProps = {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
-  defaultIngredient: Ingredients;
+  defaultIngredient: Ingredient;
 };
 
 const EditIngredientModal = (props: EditIngredientModalProps) => {

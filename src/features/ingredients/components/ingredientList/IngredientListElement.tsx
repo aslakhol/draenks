@@ -1,10 +1,9 @@
-import type { Ingredients } from "@prisma/client";
 import { useState } from "react";
 import DisplayIngredientModal from "../DisplayIngredientModal";
-import EditIngredient from "../edit/EditIngredient";
+import { Ingredient } from "../../../../backend/utils/zod";
 
 type IngredientListElementProps = {
-  ingredient: Ingredients;
+  ingredient: Ingredient;
 };
 
 const IngredientListElement = (props: IngredientListElementProps) => {
@@ -34,9 +33,9 @@ const IngredientListElement = (props: IngredientListElementProps) => {
             Download
           </a>
         </td>
-        <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+        {/* <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
           <EditIngredient ingredient={ingredient} />
-        </td>
+        </td> */}
       </tr>
       <DisplayIngredientModal
         ingredientId={ingredient.ingredientId}

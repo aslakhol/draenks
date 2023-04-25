@@ -1,7 +1,7 @@
 import { trpc } from "@/utils/trpc";
-import { Drinks, MeasuringUnit } from "@prisma/client";
 import Link from "next/link";
-import EditDrink from "../edit/EditDrink";
+import { zodDrink } from "../../../../backend/utils/zod";
+import { z } from "zod";
 
 type Props = {
   drinkId: number;
@@ -43,26 +43,16 @@ const Drink = (props: Props) => {
           download
         </a>
       </td>
-      <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+      {/* <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
         <EditDrink drinkId={drink.drinkId} />
-      </td>
+      </td> */}
     </tr>
   );
 };
 
 export default Drink;
 
-type InputDrink = Drinks & {
-  ingredients: {
-    ingredientForDrinkId: number;
-    amount: number;
-    unit: MeasuringUnit;
-    ingredient: {
-      ingredientName: string;
-      ingredientId: number;
-    };
-  }[];
-};
+type InputDrink = z.infer<typeof zodDrink>;
 
 const prepareJson = (drink: InputDrink) => {
   const json = JSON.stringify(drink);
