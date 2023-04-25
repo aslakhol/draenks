@@ -34,9 +34,9 @@ const IngredientListElement = (props: IngredientListElementProps) => {
             Download
           </a>
         </td>
-        <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+        {/* <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
           <EditIngredient ingredient={ingredient} />
-        </td>
+        </td> */}
       </tr>
       <DisplayIngredientModal
         ingredientId={ingredient.ingredientId}

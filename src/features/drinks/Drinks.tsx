@@ -9,9 +9,9 @@ const Drinks = () => {
           <div className="sm:flex-auto">
             <h1 className="text-xl font-semibold text-gray-900">Drinks</h1>
           </div>
-          <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+          {/* <div className="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
             <NewDrink />
-          </div>
+          </div> */}
         </div>
         <DrinkList />
       </div>

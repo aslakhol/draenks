@@ -22,9 +22,9 @@ const DrinkList = () => {
             <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-6">
               <span className="sr-only">Download</span>
             </th>
-            <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-6">
+            {/* <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-6">
               <span className="sr-only">Edit</span>
-            </th>
+            </th> */}
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200 bg-white">
