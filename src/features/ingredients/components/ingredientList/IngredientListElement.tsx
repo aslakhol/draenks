@@ -1,10 +1,9 @@
-import type { Ingredients } from "@prisma/client";
 import { useState } from "react";
 import DisplayIngredientModal from "../DisplayIngredientModal";
-import EditIngredient from "../edit/EditIngredient";
+import { Ingredient } from "../../../../backend/utils/zod";
 
 type IngredientListElementProps = {
-  ingredient: Ingredients;
+  ingredient: Ingredient;
 };
 
 const IngredientListElement = (props: IngredientListElementProps) => {

@@ -1,6 +1,6 @@
-import type { MeasuringUnit } from "@prisma/client";
 import { useState } from "react";
 import DisplayIngredientModal from "../ingredients/components/DisplayIngredientModal";
+import { MeasurementUnit } from "../../backend/utils/zod";
 
 type IngredientProps = {
   ingredient: {
@@ -9,7 +9,7 @@ type IngredientProps = {
       ingredientId: number;
     };
     amount: number;
-    unit: MeasuringUnit;
+    unit: MeasurementUnit;
     ingredientForDrinkId: number;
   };
 };

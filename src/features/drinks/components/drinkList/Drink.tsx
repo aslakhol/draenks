@@ -1,7 +1,5 @@
 import { trpc } from "@/utils/trpc";
-import { Drinks, MeasuringUnit } from "@prisma/client";
 import Link from "next/link";
-import EditDrink from "../edit/EditDrink";
 import { zodDrink } from "../../../../backend/utils/zod";
 import { z } from "zod";
 

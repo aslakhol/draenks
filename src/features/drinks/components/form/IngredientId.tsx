@@ -1,8 +1,8 @@
 import Combobox from "@/components/ComboBox";
 import { trpc } from "@/utils/trpc";
-import type { Ingredients } from "@prisma/client";
 import { useController, useFormContext } from "react-hook-form";
 import { NewDrinkFormType } from "../../formValidation";
+import { Ingredient } from "../../../../backend/utils/zod";
 
 type IngredientIdProps = { index: number };
 
@@ -26,7 +26,7 @@ const IngredientId = (props: IngredientIdProps) => {
     err = errors.ingredients[index]?.ingredientId;
   }
 
-  const defaultValue: Ingredients | undefined = ingredients?.find(
+  const defaultValue: Ingredient | undefined = ingredients?.find(
     (ingredient) => ingredient.ingredientId === field.value
   );
 

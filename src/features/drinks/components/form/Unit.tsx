@@ -1,7 +1,7 @@
 import Select from "@/components/Select";
-import type { MeasuringUnit } from "@prisma/client";
 import { useController, useFormContext } from "react-hook-form";
 import { NewDrinkFormType } from "../../formValidation";
+import { MeasurementUnit } from "../../../../backend/utils/zod";
 
 type UnitProps = { index: number };
 
@@ -37,7 +37,7 @@ const Unit = (props: UnitProps) => {
 
 export default Unit;
 
-const UnitOptions: MeasuringUnit[] = [
+const UnitOptions: MeasurementUnit[] = [
   "ML",
   "OZ",
   "PC",
