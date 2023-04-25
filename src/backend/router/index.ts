@@ -4,6 +4,9 @@ import { prisma } from "@/backend/utils/prisma";
 import { newDrinkFormSchema } from "@/features/drinks/formValidation";
 import { upsertIngredientsForDrink } from "../utils/ingredientForDrink";
 import { newIngredientFormSchema } from "@/features/ingredients/formValidation";
+import path from "path";
+import { promises as fs } from "fs";
+import { zodIngredients } from "../utils/zod";
 
 export const appRouter = trpc
   .router()
@@ -70,9 +73,13 @@ export const appRouter = trpc
   })
   .query("ingredients", {
     resolve: async () => {
-      const ingredients = await prisma.ingredients.findMany();
+      const fp = path.join(process.cwd(), "data", "ingredients.json");
+      const ingredients = await fs
+        .readFile(fp, "utf8")
+        .then((result) => JSON.parse(result))
+        .then((result) => zodIngredients.parse(result));
 
-      return ingredients.filter((ingredients) => !ingredients.deleted);
+      return ingredients;
     },
   })
   .mutation("create-ingredient", {
