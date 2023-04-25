@@ -6,28 +6,20 @@ import { upsertIngredientsForDrink } from "../utils/ingredientForDrink";
 import { newIngredientFormSchema } from "@/features/ingredients/formValidation";
 import path from "path";
 import { promises as fs } from "fs";
-import { zodIngredients } from "../utils/zod";
+import { zodDrinks, zodIngredients } from "../utils/zod";
 
 export const appRouter = trpc
   .router()
   .query("drink", {
     input: z.object({ drinkId: z.number() }),
     resolve: async ({ input }) => {
-      const drink = await prisma.drinks.findFirst({
-        where: { drinkId: input.drinkId },
-        include: {
-          ingredients: {
-            select: {
-              ingredientForDrinkId: true,
-              amount: true,
-              unit: true,
-              ingredient: {
-                select: { ingredientName: true, ingredientId: true },
-              },
-            },
-          },
-        },
-      });
+      const fp = path.join(process.cwd(), "data", "drinks.json");
+      const drinks = await fs
+        .readFile(fp, "utf8")
+        .then((result) => JSON.parse(result))
+        .then((result) => zodDrinks.parse(result));
+
+      const drink = drinks.find((d) => d.drinkId === input.drinkId);
 
       return drink;
     },
@@ -46,27 +38,28 @@ export const appRouter = trpc
     },
   })
   .query("drinks", {
-    resolve: () => {
-      return prisma.drinks.findMany({
-        include: {
-          ingredients: {
-            select: {
-              ingredientForDrinkId: true,
-              ingredient: {
-                select: { ingredientName: true, ingredientId: true },
-              },
-            },
-          },
-        },
-      });
+    resolve: async () => {
+      const fp = path.join(process.cwd(), "data", "drinks.json");
+      const drinks = await fs
+        .readFile(fp, "utf8")
+        .then((result) => JSON.parse(result))
+        .then((result) => zodDrinks.parse(result));
+
+      return drinks;
     },
   })
   .query("ingredient", {
     input: z.object({ ingredientId: z.number() }),
     resolve: async ({ input }) => {
-      const ingredient = await prisma.ingredients.findFirst({
-        where: { ingredientId: input.ingredientId },
-      });
+      const fp = path.join(process.cwd(), "data", "ingredients.json");
+      const ingredients = await fs
+        .readFile(fp, "utf8")
+        .then((result) => JSON.parse(result))
+        .then((result) => zodIngredients.parse(result));
+
+      const ingredient = ingredients.find(
+        (i) => i.ingredientId === input.ingredientId
+      );
 
       return ingredient;
     },
